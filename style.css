@@ -775,7 +775,7 @@ nav button{
     left: 0;
     top: 0;
   }
-  .slider-home .slide-track {
+  .slider-home .slide-logos {
     -webkit-animation: scroll 40s linear infinite;
             animation: scroll 40s linear infinite;
     display: grid;
@@ -1219,7 +1219,7 @@ footer {
     width: 50px;
   }
 
-  .slider-home .slide-track {
+  .slider-home .slide-logos {
     width: calc(210px * 24);}
 /* end section orgullo */
 /* section formulario */
