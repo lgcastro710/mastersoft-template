@@ -72,3 +72,12 @@
       alert("Error al enviar el formulario.");
     }
   });
+
+   $('.single-item').slick({
+  dots: true,
+  infinite: true,
+  arrows: false,
+  speed: 300,
+  slidesToShow: 1,
+  adaptiveHeight: true
+});

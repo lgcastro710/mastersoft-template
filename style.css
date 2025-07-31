@@ -97,6 +97,26 @@ body {
 .title3 span{
     color: var(--primary-color);
 }
+.cta-primary{
+    background: var(--primary-color);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    width: fit-content;
+    transition: background 0.3s ease;
+  }
+.cta-primary:hover {
+        background: #97212e;
+    }
+    .cta-primary a{
+        color: var(--white-color);
+        text-decoration: none;
+    }
     /* end utilities */
 /* Menú */
 header {
@@ -234,10 +254,10 @@ nav button{
 .cta-contactos {
     background: var(--primary-color);
     color: #fff;
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', sans-serif;
     padding: 12px 35px;
     border-radius: 8px;
-    font-weight: bold;
+    font-weight: 600;
     text-decoration: none;
 }
 .cta-contactos:hover {
@@ -298,13 +318,71 @@ nav button{
 /* section hero */
 .hero-section{
     padding-top: 140px;
-    position: relative;
-    background-image: url("./img/concepto-de-collage-de-control-de-calidad-estandar.jpg");
-    background-size: 100% 115%;
-    background-position: top;
+    position: relative;    
     height: 90vh;
-    display: flex;
 }
+.img-hero1{
+    background-image: url("./img/Home_Slide1.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 90vh !important;
+}
+.img-hero2{
+    background-image: url("./img/Home_Slide2.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 90vh !important;
+}
+.img-hero3{
+    background-image: url("./img/Home_Slide3.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 90vh !important;
+}
+.img-hero4{
+    background-image: url("./img/Home_Slide4.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 90vh !important;
+}
+.slide-track{
+    height: 90vh !important;
+}
+.slick-dots {
+    position: absolute;
+    bottom: 200px !important;
+    display: block;
+    width: 40% !important;
+    padding: 0;
+    margin: 0;
+    left: 18.2%  !important;
+    list-style: none;
+    text-align: left !important;
+}
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block !important;
+    width: 15px !important;
+    height: 15px !important;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    color: transparent;
+    border: 2px solid #b12535 !important;
+    outline: none;
+    background: transparent !important;
+}
+.slick-dots li.slick-active button {
+    background: var(--primary-color) !important;
+    cursor: var(--primary-color);
+}
+.slick-dots li button:before {
+    content: '';
+    display: none;
+    color: var(--primary-color);
+    
+} 
 .hero-section::after{
     content: '';
     position: absolute;
@@ -329,10 +407,18 @@ nav button{
     align-items: center; 
     padding: 100px;   
 }
+.info-hero{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
 .info-hero p {
     color: var(--white-color);
     font-size: 22px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 35px;
     font-family: 'Open Sans', sans-serif;
     text-align: left;
@@ -358,7 +444,7 @@ nav button{
 .soluciones p {
     text-align: left;
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 35px;
     font-family: 'Open Sans', sans-serif;
     color: var(--text-color);
@@ -391,7 +477,7 @@ nav button{
 }
 .card-solucion p {
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 30px;
     font-family: 'Open Sans', sans-serif;
     color: var(--text-color);
@@ -425,13 +511,13 @@ nav button{
     text-align: center !important;
   }
 .colour-primary button {
-    background: var(--secondary-color);
+    background: var(--primary-color);
     color: var(--white-color);
     padding: 12px 35px;
     border: none;
     cursor: pointer;
     border-radius: 36px;
-    font-weight: bold;
+    font-weight: 600;
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
     transition: 3ms ease;
@@ -443,7 +529,7 @@ nav button{
 .tecno-cards {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0px 0 100px;
+    padding: 50px 0 100px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
@@ -470,12 +556,12 @@ nav button{
 .img-infocard{
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 20px;
+    gap: 40px;
     justify-content: center;
     align-items: center;
 }
 .img-infocard span {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 600;
     line-height: 30px;
     font-family: 'Open Sans', sans-serif;
@@ -507,7 +593,7 @@ nav button{
     font-family: 'Open Sans', sans-serif;
     padding: 12px 24px;
     border-radius: 4px;
-    font-weight: bold;
+    font-weight: 600;
     text-decoration: none;
 }
 .cta-productos a:hover {
@@ -556,7 +642,7 @@ nav button{
 }
 .respaldo-section p {
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 35px;
     font-family: 'Open Sans', sans-serif;
     color: var(--text-color);
@@ -585,7 +671,7 @@ nav button{
 }
 .logo-infocard p {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 30px;
     font-family: 'Open Sans', sans-serif;
     color: var(--text-color);
@@ -612,7 +698,7 @@ nav button{
 }
 .texto-orgullo p{
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 35px;
     font-family: 'Nunito', sans-serif;
     color: var(--white-color);
@@ -724,7 +810,7 @@ nav button{
 }
 .info-contacto p {
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 35px;
     font-family: 'Nunito', sans-serif;
     color: var(--text-color);
@@ -738,7 +824,7 @@ nav button{
 }
 .formulario p{
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 30px;
     font-family: 'Nunito', sans-serif;
     color: var(--text-color);
@@ -777,16 +863,18 @@ nav button{
     }
   }
 
-  p { margin: 10px 0 0; font-weight: bold; }
+  p { margin: 10px 0 0; font-weight: bold; font-family: 'Open Sans', sans-serif; }
 
   button {
     background: var(--primary-color);
     color: white;
-    padding: 12px;
+    padding: 12px 24px;
     margin-top: 20px;
     border: none;
     border-radius: 4px;
     font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
     cursor: pointer;
     width: fit-content;
     transition: background 0.3s ease;
@@ -905,7 +993,7 @@ footer {
 }
 .copy p{
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 20px;
     font-family: 'Nunito', sans-serif;
     color: var(--white-color);
