@@ -348,16 +348,19 @@ nav button{
 .slide-track{
     height: 90vh !important;
 }
+
 .slick-dots {
-    position: absolute;
+    position: relative !important;
     bottom: 200px !important;
     display: block;
-    width: 40% !important;
     padding: 0;
-    margin: 0;
-    left: 18.2%  !important;
+    margin: 0 auto !important;
+    max-width: 1200px;
     list-style: none;
     text-align: left !important;
+}
+.slick-dots li {
+    margin: 0 5px 0 0 !important;
 }
 .slick-dots li button {
     font-size: 0;
@@ -465,6 +468,10 @@ nav button{
     width: 520px;
     position: relative;
 }
+.card-solucion:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
 .card-solucion:hover::after{
     content: '';
     display: block;
@@ -512,8 +519,8 @@ nav button{
     text-align: center !important;
   }
 .colour-primary button {
-    background: var(--primary-color);
-    color: var(--white-color);
+    background: var(--secondary-color);
+    color: var(--primary-color);
     padding: 12px 35px;
     border: none;
     cursor: pointer;
@@ -525,7 +532,7 @@ nav button{
 }
 .colour-primary button:hover {
     background: #c48834;
-    color: #ffffff;
+    color: var(--primary-color);
 }
 .tecno-cards {
     max-width: 1200px;
@@ -1014,14 +1021,17 @@ footer {
 .title1 {
     color: var(--white-color);
     font-size: 34px;
+    text-align: center;
 }
 .title2 {
     color: var(--text-color);
     font-size: 34px;
+    text-align: center;
 }
 .title3 {
     color: var(--white-color);
     font-size: 34px;
+    text-align: center;
 }
     /* end utilities */
     /* nav menu */
@@ -1074,17 +1084,55 @@ footer {
     display: flex;
 }
 .hero-section::after{
-    background-image: none;
+    display: none;
 }
 .content-hero{
     grid-template-columns: 1fr;
     padding: 20px;   
+}
+.hero-section{   
+    height: 70vh;
+}
+.img-hero1{
+    height: 70vh !important;
+}
+.img-hero2{
+    height: 70vh !important;
+}
+.img-hero3{
+    height: 70vh !important;
+}
+.img-hero4{
+    height: 70vh !important;
+}
+.slide-track{
+    height: 90vh !important;
+}
+.info-hero{
+    grid-template-columns: 1fr;
+    padding-top: 70px;
+    text-align: center;
+    gap: 0px;
+    padding: 70px 20px 0;
 }
 .info-hero p {
     color: var(--white-color);
     font-size: 18px;
     line-height: 30px;
     text-align: center;
+}
+.slick-dots {
+        bottom: 50px !important;
+        max-width: 100px;
+        margin: 0 auto !important;
+        text-align: center !important;
+        height: 50px;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+}
+.slick-list {
+    height: 70vh !important;
 }
 /* end section hero */
 /* section soluciones */
@@ -1120,7 +1168,22 @@ footer {
 }
 /* end section soluciones */
 /* end section tecnologia */
-
+.colour-primary button {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 12px 35px;
+    border: none;
+    cursor: pointer;
+    border-radius: 36px;
+    font-weight: 600;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    transition: 3ms ease;
+}
+.colour-primary button:hover {
+    background: #c48834;
+    color: var(--primary-color);
+}
 .tecno-cards {
     padding: 50px 20px 100px;
     grid-template-columns: 1fr;
