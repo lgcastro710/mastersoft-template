@@ -429,8 +429,10 @@ nav button{
 /* end section hero */
 /* section soluciones */
 .soluciones-section {
-    background: #F1ECEC;
-    background: linear-gradient(90deg,rgba(241, 236, 236, 1) 47%, rgba(241, 233, 230, 1) 100%)
+    background: radial-gradient(circle at 20% 30%, rgba(255, 240, 240, 0.25) 0%, transparent 60%),
+                radial-gradient(circle at 80% 25%, rgba(255, 235, 235, 0.2) 0%, transparent 60%),
+                radial-gradient(circle at 50% 75%, rgba(255, 225, 225, 0.15) 0%, transparent 60%);
+    background-color: #fefefe;  
 }
 .content-soluciones {
     max-width: 1200px;
@@ -797,7 +799,10 @@ nav button{
 /* end section orgullo */
 /* section formulario */
 .formulario-section {
-    background: var(--white-color);
+    background: radial-gradient(circle at 20% 30%, rgba(255, 240, 240, 0.25) 0%, transparent 60%),
+                radial-gradient(circle at 80% 25%, rgba(255, 235, 235, 0.2) 0%, transparent 60%),
+                radial-gradient(circle at 50% 75%, rgba(255, 225, 225, 0.15) 0%, transparent 60%);
+    background-color: #fefefe;  
     padding: 50px 0;
 }
 .content-formulario {
