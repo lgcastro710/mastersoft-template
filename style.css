@@ -322,25 +322,25 @@ nav button{
     height: 90vh;
 }
 .img-hero1{
-    background-image: url("./img/Home_Slide1.jpg");
+    background-image: url("./img/Home_Slide1.png");
     background-size: cover;
     background-position: center;
     height: 90vh !important;
 }
 .img-hero2{
-    background-image: url("./img/Home_Slide2.jpg");
+    background-image: url("./img/Home_Slide2.png");
     background-size: cover;
     background-position: center;
     height: 90vh !important;
 }
 .img-hero3{
-    background-image: url("./img/Home_Slide3.jpg");
+    background-image: url("./img/Home_Slide3.png");
     background-size: cover;
     background-position: center;
     height: 90vh !important;
 }
 .img-hero4{
-    background-image: url("./img/Home_Slide4.jpg");
+    background-image: url("./img/Home_Slide4.png");
     background-size: cover;
     background-position: center;
     height: 90vh !important;
@@ -426,7 +426,8 @@ nav button{
 /* end section hero */
 /* section soluciones */
 .soluciones-section {
-    background: var(--background-color);
+    background: #F1ECEC;
+    background: linear-gradient(90deg,rgba(241, 236, 236, 1) 47%, rgba(241, 233, 230, 1) 100%)
 }
 .content-soluciones {
     max-width: 1200px;
