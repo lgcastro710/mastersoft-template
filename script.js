@@ -73,11 +73,38 @@
     }
   });
 
-   $('.single-item').slick({
-  dots: true,
-  infinite: true,
-  arrows: false,
-  speed: 300,
-  slidesToShow: 1,
-  adaptiveHeight: true
+$(document).ready(function () {
+    $('.single-item').slick({
+      autoplay: true,
+      infinite: true,
+      autoplaySpeed: 3000,
+        slidesToShow: 1,
+       adaptiveHeight: true,
+      arrows: false,
+      dots: true
+    });
+     setTimeout(function () {
+    $('.single-item').slick('slickPlay');
+  }, 5000);
 });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll('.card-solucion');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('zoom-in');
+          } else {
+            entry.target.classList.remove('zoom-in'); // Si querés que se reinicie al salir
+          }
+        });
+      },
+      {
+        threshold: 0.2, // Se activa cuando el 20% es visible
+      }
+    );
+
+    cards.forEach(card => observer.observe(card));
+  });

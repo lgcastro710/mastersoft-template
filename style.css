@@ -18,7 +18,7 @@
 }
 @font-face {
     font-family: 'Open Sans';
-    src: url('./fonts/static/OpenSans-Regular.ttf') format("truetype");
+    src: url('./fonts/static/OpenSans-SemiBold.ttf') format("truetype");
     font-weight: 600;
     font-style: normal;
 }
@@ -280,10 +280,26 @@ nav button{
     flex-direction: column;
 }
 
-.bar1,
-.bar2,
-.bar3 {
+.bar1{
     width: 35px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 4px 0;
+    transition: 0.3s;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.bar2{
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 4px 0;
+    transition: 0.3s;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.bar3 {
+    width: 15px;
     height: 3px;
     background-color: var(--text-color);
     margin: 4px 0;
@@ -306,7 +322,7 @@ nav button{
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
     margin-top: -18px;
-    ;
+    width: 35px !important;
 }
 
 .active-item {
@@ -432,7 +448,8 @@ nav button{
     background: radial-gradient(circle at 20% 30%, rgba(255, 240, 240, 0.25) 0%, transparent 60%),
                 radial-gradient(circle at 80% 25%, rgba(255, 235, 235, 0.2) 0%, transparent 60%),
                 radial-gradient(circle at 50% 75%, rgba(255, 225, 225, 0.15) 0%, transparent 60%);
-    background-color: #fefefe;  
+    background-color: #fefefe; 
+    display: block; 
 }
 .content-soluciones {
     max-width: 1200px;
@@ -466,10 +483,12 @@ nav button{
     border-radius: 8px;
     padding: 20px 30px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.6s ease, box-shadow 0.3s ease;
+    transform: scale(1);
     width: 520px;
     position: relative;
 }
+
 .card-solucion:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: scale(1.02);
@@ -487,10 +506,10 @@ nav button{
 }
 .card-solucion p {
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 600;
     line-height: 30px;
     font-family: 'Open Sans', sans-serif;
-    color: var(--text-color);
+    color: var(--gray-color);
     text-align: left;
 }
 .cta-conoce{
@@ -530,6 +549,7 @@ nav button{
     font-weight: 600;
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
     transition: 3ms ease;
 }
 .colour-primary button:hover {
@@ -575,7 +595,7 @@ nav button{
     font-weight: 600;
     line-height: 30px;
     font-family: 'Open Sans', sans-serif;
-    color: var(--text-color);
+    color: var(--gray-color);
     text-align: left;
 }
 .tecno-card p {
@@ -681,7 +701,7 @@ nav button{
 }
 .logo-infocard p {
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 500;
     line-height: 30px;
     font-family: 'Open Sans', sans-serif;
     color: var(--text-color);
@@ -860,6 +880,7 @@ nav button{
       margin-top: 4px;
       padding: 10px 0;
       border: none;
+      background: transparent;
       font-family: 'Open Sans', sans-serif;
       font-size: 18px;
       border-bottom: 1px solid #F1F1F1;
@@ -1013,6 +1034,56 @@ footer {
     margin-top: 20px;
 }
 /* syles footer */
+/* stlys btn whatsapp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+}
+
+.whatsapp-float img {
+  width: 60px;
+  height: 60px;
+}
+
+/* Tooltip */
+.whatsapp-float .tooltip {
+  position: absolute;
+      right: -8px;
+    bottom: 60px;
+  background-color: #333;
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 14px;
+  font-family: 'Nunito', sans-serif;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.whatsapp-float:hover .tooltip {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
 /* ----- styles mobile ------ */
 @media (max-width: 930px) {
     /* utilities */
@@ -1026,12 +1097,12 @@ footer {
 .title1 {
     color: var(--white-color);
     font-size: 34px;
-    text-align: center;
+    text-align: left;
 }
 .title2 {
     color: var(--text-color);
     font-size: 34px;
-    text-align: center;
+    text-align: left;
 }
 .title3 {
     color: var(--white-color);
@@ -1040,6 +1111,10 @@ footer {
 }
     /* end utilities */
     /* nav menu */
+    header{
+        background-color: #fdfdfd;
+        background-image: radial-gradient(circle at top left, rgba(202, 194, 255, 0.1) 0%, transparent 70%);
+    }
     nav ul.topnav {
         display: none;
     }
@@ -1089,26 +1164,28 @@ footer {
     display: flex;
 }
 .hero-section::after{
-    display: none;
+    bottom: -50px;
+    height: 120px;
+    background-image: url("./img/diagonal-rojo-mobile.png");
 }
 .content-hero{
     grid-template-columns: 1fr;
     padding: 20px;   
 }
 .hero-section{   
-    height: 70vh;
+    height: 75vh;
 }
 .img-hero1{
-    height: 70vh !important;
+    height: 75vh !important;
 }
 .img-hero2{
-    height: 70vh !important;
+    height: 75vh !important;
 }
 .img-hero3{
-    height: 70vh !important;
+    height: 75vh !important;
 }
 .img-hero4{
-    height: 70vh !important;
+    height: 75vh !important;
 }
 .slide-track{
     height: 90vh !important;
@@ -1118,7 +1195,7 @@ footer {
     padding-top: 70px;
     text-align: center;
     gap: 0px;
-    padding: 70px 20px 0;
+    padding: 30px 20px ;
 }
 .info-hero p {
     color: var(--white-color);
@@ -1127,20 +1204,27 @@ footer {
     text-align: center;
 }
 .slick-dots {
-        bottom: 50px !important;
-        max-width: 100px;
+        bottom: 80px !important;
+        max-width: 80%;
         margin: 0 auto !important;
         text-align: center !important;
         height: 50px;
+        left: -20px;
         display: flex !important;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
 }
 .slick-list {
-    height: 70vh !important;
+    height: 75vh !important;
 }
 /* end section hero */
 /* section soluciones */
+.soluciones-section {
+  background: radial-gradient(circle at 10% 10%, rgba(255, 240, 240, 0.25) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(250, 230, 240, 0.2) 0%, transparent 60%),
+              radial-gradient(circle at 50% 80%, rgba(250, 220, 230, 0.15) 0%, transparent 65%);
+  background-color: #fdfdfd;  
+}
 .content-soluciones {
     padding: 50px 20px 150px;
     grid-template-columns: 1fr;
@@ -1159,6 +1243,10 @@ footer {
 .card-solucion {
     width: auto;
 }
+.card-solucion.zoom-in {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
 .card-solucion br{
     display: none;
 }
@@ -1173,6 +1261,9 @@ footer {
 }
 /* end section soluciones */
 /* end section tecnologia */
+.colour-primary {
+    padding-top: 50px;
+}
 .colour-primary button {
     background: var(--secondary-color);
     color: var(--primary-color);
@@ -1193,25 +1284,31 @@ footer {
     padding: 50px 20px 100px;
     grid-template-columns: 1fr;
 }
+.img-infocard {
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+.img-infocard img {
+        max-width: 60%;
+        margin-top: 20px;
+    }
 .img-infocard span {
-    font-size: 14px;
+    font-size: 15px;
 }
 .img-infocard span br{
    display: none;
 }
 .tecno-card p {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     line-height: 30px;
     font-family: 'Open Sans', sans-serif;
     color: var(--gray-color);
     text-align: left;
 }
-.img-infocard img {
-    max-width: 100px;
-}
   .skew-cc{
-    height:60px;
+    height:30px;
+    background: linear-gradient(to left bottom, var(--primary-color) 49%, transparent 50%);
   }
   .skew-c{
     height:60px;
@@ -1222,21 +1319,21 @@ footer {
 /* section respaldo */
 .respaldo-section {
     background: var(--white-color);
-    padding: 50px 20px 100px;
+    padding: 0px 0px 100px;
 }
 .content-respaldo {
     grid-template-columns: 1fr;
-}
-.content-respaldo{
-    margin-top: 50px;
+    margin-top: 0px;
 }
 .img-respaldo{
     height: 300px;
 }
 
 .respaldo-logos{
-    padding: 50px 0 ;
+    padding: 50px 0 0;
     align-items: baseline;
+    grid-template-columns: 1fr;
+    gap: 20px;
 }
 .logo-infocard{
     display: flex;
@@ -1250,14 +1347,13 @@ footer {
     object-fit: cover;
     margin-bottom: 20px;
 }
-.logo-infocard p {
-    font-size: 14px;
-    line-height: 18px;
+.texto-respaldo{
+    padding: 0 20px;
 }
-.logo-infocard span {
-    font-size: 18px;
-    line-height: 25px;
+.logo-infocard p br {
+    display: none;
 }
+
 /* end section respaldo */
 /* section orgullo */
 .content-orgullo{
@@ -1303,7 +1399,7 @@ footer {
 .info-contacto h3 {
     font-size: 28px;
     line-height: 45px;
-    text-align: center;
+    text-align: left;
 }
 .info-contacto p {
     font-size: 18px;
@@ -1333,6 +1429,19 @@ footer {
 }
 .footer-logo{
     margin-bottom: 50px;
+}
+.footer-logo img {
+    float: none; 
+}
+.footer-links {
+    align-items: center;
+}
+.footer-links ul {
+    padding: 0;
+    text-align: center;
+}
+.footer-links ul li {
+    margin: 5px 0;
 }
 /* syles footer */
 }
