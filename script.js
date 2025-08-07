@@ -102,7 +102,7 @@ $(document).ready(function () {
         });
       },
       {
-        threshold: 0.2, // Se activa cuando el 20% es visible
+        threshold: 0.9, // Se activa cuando el 20% es visible
       }
     );
 
