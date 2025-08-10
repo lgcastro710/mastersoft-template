@@ -108,3 +108,21 @@ $(document).ready(function () {
 
     cards.forEach(card => observer.observe(card));
   });
+
+  // tabs
+const tabs = document.querySelectorAll(".tab");
+const contents = document.querySelectorAll(".tab-content");
+
+tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+        // Quitar active de todos los tabs y contenidos
+        tabs.forEach(t => t.classList.remove("active"));
+        contents.forEach(c => c.classList.remove("active"));
+
+        // Activar tab y contenido seleccionado
+        tab.classList.add("active");
+        document.getElementById(tab.dataset.tab).classList.add("active");
+    });
+});
+
+
