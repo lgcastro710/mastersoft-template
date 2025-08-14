@@ -337,26 +337,38 @@ nav button{
     position: relative;    
     height: 90vh;
 }
-.img-hero1{
+.img-slider1{
     background-image: url("./img/Home_Slide1.png");
     background-size: cover;
     background-position: center;
     height: 90vh !important;
 }
-.img-hero2{
+.img-slider2{
     background-image: url("./img/Home_Slide2.png");
     background-size: cover;
     background-position: center;
     height: 90vh !important;
 }
-.img-hero3{
+.img-slider3{
     background-image: url("./img/Home_Slide3.png");
     background-size: cover;
     background-position: center;
     height: 90vh !important;
 }
-.img-hero4{
+.img-slider4{
     background-image: url("./img/Home_Slide4.png");
+    background-size: cover;
+    background-position: center;
+    height: 90vh !important;
+}
+.img-hero-erp{
+    background-image: url("./img/MasterSoft_Erp_hero.png");
+    background-size: cover;
+    background-position: center;
+    height: 90vh !important;
+}
+.img-hero-IS{
+    background-image: url("./img/MasterSoft_salud_hero.png");
     background-size: cover;
     background-position: center;
     height: 90vh !important;
@@ -1246,7 +1258,7 @@ footer {
 }
 /*  styles gestion */
 .gestion-section {
-    background: #fdfdfd;
+    background: #ffffff;
     padding: 50px 0 100px;
 }
 .texto-gestion {
@@ -1264,149 +1276,16 @@ footer {
     line-height: 35px;
     font-family: 'Open Sans', sans-serif;
     color: var(--text-color);
-    margin-bottom: 50px;
 }
 .features-section {
   max-width: 1200px;
   margin: 0 auto;
   padding: 30px 20px;
-  display: grid;
-  grid-template-columns: 140px 1fr 140px;
-  grid-template-rows: auto auto;
-  grid-template-areas:
-    "left center right"
-    "bottom bottom bottom";
-  gap: 20px;
-  align-items: center;
 }
-
-/* side icons */
-.side-icons { display: flex; flex-direction: column; gap: 18px; align-items: center; }
-.side-icons.left { grid-area: left; }
-.side-icons.right { grid-area: right; }
-
-.side-icon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.85rem;
-  color: #b30000;
-  text-align: center;
-  width: 100%;
-}
-.side-icons.right img { max-width: 80px; object-fit: contain;}
-.side-icons.left img { max-width: 60px; object-fit: contain;}
-.side-icon span {
-    font-family: 'Nunito', sans-serif;
-    font-weight: 600;
-    color: var(--gray-color);
-    text-align: center;
-    line-height: 1.2;
-    font-size: 18px;
-}
-/* Centro: grid de features */
-.features-center { 
-    grid-area: center; 
-    position: relative;
-    display: inline-block;
-}
-.features-grid {
-    position: relative;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(160px, 1fr));
-  gap: 30px;
-  align-items: stretch;
-  padding: 20px;
-  border: 2px dashed #cdcdcd; 
-  border-radius: 16px;
-
-}
-/* cada "botón" */
-.feature-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  background: #b30000;
-  color: #fff;
-  padding: 14px 12px;
-  height: 50px;
-  border-radius: 8px;
-  text-align: center;
-  font-family: 'Nunito', sans-serif;
-  font-weight: 700;
-  box-shadow: 0 6px 12px rgba(179,0,0,0.08);
-  line-height: 1.1;
-}
-
-/* Iconos de abajo */
-.bottom-icons {
-  grid-area: bottom;
-  display: flex;
-  justify-content: center;
-  gap: 26px;
-  margin-top: 6px;
-  flex-wrap: wrap;
-  padding-top: 8px;
-}
-
-.bottom-icon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.9rem;
-  color: #333;
-  min-width: 180px;
-}
-.bottom-icon img {
-max-width: 70px;
-height: 70px;
-  object-fit: contain;
-}
-.bottom-icon span{
-    font-family: 'Nunito', sans-serif;
-    font-weight: 600;
-    color: var(--gray-color);
-    text-align: center;
-    line-height: 1.2;
-    font-size: 18px;
-}
-/* Mobile */
-@media (max-width: 768px) {
-.gestion-section {
-    background: #fdfdfd;
-    padding: 100px 0;
-}
-  .features-section {
-    grid-template-columns: 1fr;
-    grid-template-areas:"left" "right" "center" "bottom";
-    padding: 16px;
-  }
-
-  /* mostrar side-icons como fila arriba */
-  .side-icons { flex-direction: row; justify-content: center; gap: 12px; }
-  .side-icon { font-size: 0.85rem; }
-
-  /* features grid -> scroll horizontal (carrusel) */
-  .features-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    padding: 10px;
-  }
-  .features-grid::-webkit-scrollbar { display: none; }
-  .feature-item {
-    flex: 0 0 auto;
-    min-width: 70%;
-    scroll-snap-align: start;
-    text-align: center;
-  }
-  .bottom-icons {
-    justify-content: space-around;
-    gap: 12px;
-  }
-  .bottom-icon { min-width: 140px; font-size: 0.85rem; text-align:center; justify-content:center; }
+.features-section img{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 /* styles videos section */
 .video-section {
@@ -1509,7 +1388,7 @@ height: 70px;
 }
 .cta-integraciones a button {
     background: var(--primary-color);
-    color: var(--secondary-color);
+    color: var(--white-color);
     padding: 12px 24px;
     border-radius: 4px;
     cursor: pointer;
@@ -1521,7 +1400,7 @@ height: 70px;
 }
 .cta-integraciones a button:hover {
     background: #97212e;
-    color: var(--secondary-color);
+    color: var(--white-color);
 }
 /* ----- styles mobile ------ */
 @media (max-width: 930px) {
@@ -1614,16 +1493,22 @@ height: 70px;
 .hero-section{   
     height: 75vh;
 }
-.img-hero1{
+.img-slider1{
     height: 75vh !important;
 }
-.img-hero2{
+.img-slider2{
     height: 75vh !important;
 }
-.img-hero3{
+.img-slider3{
     height: 75vh !important;
 }
-.img-hero4{
+.img-slider4{
+    height: 75vh !important;
+}
+.img-hero-erp{
+    height: 75vh !important;
+}
+.img-hero-IS{
     height: 75vh !important;
 }
 .slide-track{
