@@ -125,4 +125,30 @@ tabs.forEach(tab => {
     });
 });
 
+// scroll suave al formulario
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll('a.ancla[href^="#"]').forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      let destino = document.querySelector(this.hash); // busca por ID
+      if (!destino) {
+        destino = document.querySelector('a[name="' + this.hash.substring(1) + '"]'); // busca por name
+      }
+      if (!destino) {
+        destino = document.documentElement; // fallback al inicio
+      }
+
+      const destinoY = destino.getBoundingClientRect().top + window.scrollY - 90;
+
+      window.scrollTo({
+        top: destinoY,
+        behavior: "smooth"
+      });
+    });
+  });
+});
+
+
+
 
