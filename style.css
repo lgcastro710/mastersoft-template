@@ -135,6 +135,7 @@ html {
         color: var(--white-color);
         text-decoration: none;
     }
+
     /* end utilities */
 /* Menú */
 header {
@@ -489,6 +490,22 @@ nav button{
     padding-top: 100px;
 }
 .info-hero p {
+    color: var(--white-color);
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 35px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+}
+.info-hero2{
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+.info-hero2 p {
     color: var(--white-color);
     font-size: 22px;
     font-weight: 300;
@@ -1051,6 +1068,46 @@ nav button{
     background: linear-gradient(90deg, #F1F1F1 38.02%, rgba(255, 255, 255, 0) 100%);
   }
 /* end section orgullo */
+/* sction feed */
+.fedd-section{
+    background: var(--primary-color);
+    padding: 100px 0 50px;
+}
+    .eapps-widget:hover .eapps-widget-toolbar{
+      display:  none !important;
+    }
+    .content-fedd{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .content-fedd br{
+        display: none;
+    }
+    .content-fedd p{
+        color: var(--white-color);
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 35px;
+        font-family: 'Open Sans', sans-serif;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .eapps-instagram-feed-title{
+        display: none !important;
+    }
+    #eapps-instagram-feed-1 .eapps-instagram-feed-posts-grid-load-more{
+        background: var(--secondary-color) !important;
+        border-radius: 36px !important;
+        font-family: 'Open Sans', sans-serif;
+    }
+    #eapps-instagram-feed-1 .eapps-instagram-feed-posts-grid-load-more:hover{
+        background: #c48834 !important;
+    }
+      #eapps-instagram-feed-popup-1 {
+        display: none !important;
+     }
+
+/* sction feed */
 /* section formulario */
 .formulario-section {
     background: radial-gradient(circle at 20% 30%, rgba(255, 240, 240, 0.25) 0%, transparent 60%),
@@ -1784,6 +1841,19 @@ footer {
     line-height: 30px;
     text-align: left;
 }
+.info-hero2{
+    grid-template-columns: 1fr;
+    padding-top: 70px;
+    text-align: left;
+    gap: 0px;
+    padding: 30px 20px ;
+}
+.info-hero2 p {
+   color: var(--white-color);
+    font-size: 18px;
+    line-height: 30px;
+    text-align: left;
+}
 .slick-dots {
         bottom: 80px !important;
         max-width: 80%;
@@ -1994,6 +2064,37 @@ footer {
   .slider-home .slide-logos {
     width: calc(210px * 24);}
 /* end section orgullo */
+/* sction feed */
+.fedd-section{
+    background: var(--primary-color);
+    padding: 100px 2px0 50px;
+}
+    .eapps-widget:hover .eapps-widget-toolbar{
+      display:  none !important;
+    }
+    .content-fedd br{
+        display: block;
+    }
+    .fedd-cards{
+        padding: 0 20px;
+    }
+    .content-fedd{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .content-fedd p{
+        color: var(--white-color);
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 35px;
+        font-family: 'Open Sans', sans-serif;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+.eapps-instagram-feed-posts-view{
+    row-gap: 30px !important;
+}
+/* sction feed */
 /* section formulario */
 .formulario-section {
     background: var(--white-color);

@@ -149,6 +149,16 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+  const linkBranding = document.querySelector('#eapps-instagram-feed-1 > a');
+  if(linkBranding) {
+    linkBranding.style.display = 'none';
+  }
+  setInterval(() => {
+  const linkBranding = document.querySelector('#eapps-instagram-feed-1 > a');
+  if (linkBranding) linkBranding.style.display = 'none';
+}, 50);
+});
 
 
 
