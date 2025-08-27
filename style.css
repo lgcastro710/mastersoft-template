@@ -1071,7 +1071,7 @@ nav button{
 /* sction feed */
 .fedd-section{
     background: var(--primary-color);
-    padding: 100px 0 50px;
+    padding: 100px 0 100px;
 }
     .eapps-widget:hover .eapps-widget-toolbar{
       display:  none !important;
@@ -1106,6 +1106,9 @@ nav button{
       #eapps-instagram-feed-popup-1 {
         display: none !important;
      }
+     .eapps-instagram-feed-posts-grid-load-more-container {
+    display: none !important;
+}
 
 /* sction feed */
 /* section formulario */
