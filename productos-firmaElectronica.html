@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasterSoft</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./slick-slider/slick-theme.css" />
+    <link rel="stylesheet" href="./slick-slider/slick.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=keyboard_arrow_down" />
+    <link rel="shortcut icon" href="./img/mastersoft.ico" type="image/x-icon">
+</head>
+<body>
+            <header>
+            <nav>
+                <a href="index"><img src="./img/logo-mastersoft.png" alt="Logo MasterSoft" /></a>
+                <ul class="topnav" id="myTopnav">
+                    <li> 
+                        <div class="dropdown" data-id="1">
+                        <button class="dropdown-toggle">
+                        Productos
+                        <span class="arrow" id="arrow"><span class="material-symbols-outlined">keyboard_arrow_down</span>
+                        </button>
+                            <div class="dropdown-menu" id="dropdownMenu">
+                                <a href="productos-numbit" class="line-dropdown">ERP</a>
+                                <a href="productos-rrhh" class="line-dropdown">RRHH</a>
+                                <a href="#" class="line-dropdown">HIS - Gestión Salud</a>
+                                <a href="productos-firmaElectronica">Firma Electrónica</a>
+                            </div>
+                        </div>
+                    </li>
+                     <li> 
+                        <div class="dropdown" data-id="2">
+                        <button class="dropdown-toggle">
+                        Verticales
+                        <span class="arrow" id="arrow"><span class="material-symbols-outlined">keyboard_arrow_down</span></span>
+                        </button>
+                            <div class="dropdown-menu" id="dropdownMenu">
+                                <a href="verticales-salud" class="line-dropdown">Instituciones de Salud</a>
+                                <a href="verticales-sindicato" class="line-dropdown">Sindicatos</a>
+                                <a href="verticales-ong" class="line-dropdown">Asociaciones profesionales y ONGs</a>
+                                <a href="#">Distribuidoras</a>
+                            </div>
+                        </div>
+                    </li>
+                     <li> 
+                        <div class="dropdown" data-id="3">
+                        <button class="dropdown-toggle">
+                        Oportunidades
+                        <span class="arrow" id="arrow"><span class="material-symbols-outlined">keyboard_arrow_down</span></span>
+                        </button>
+                            <div class="dropdown-menu" id="dropdownMenu">
+                            <a href="#" class="line-dropdown">Red de Partners</a>
+                            <a href="#">Empleos</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="version-mobile"><a href="#formulario" class="ancla cta-contactos">Contáctanos</a></li>
+                </ul>
+                <div class="align-cta version-desktop"><a href="#formulario" class="ancla cta-contactos">Contáctanos</a></div>
+                <div class="menu-next">
+                <div class="container-menu" onclick="menuToggle(this)" id="icon-menuToggle">
+                  <div class="bar1"></div>
+                  <div class="bar2"></div>
+                  <div class="bar3"></div>
+                </div>
+                </div>
+            </nav>
+          </header>
+    <section class="hero-section">
+      <div class="img-hero-firma">
+                <div class="info-hero">
+                    <div>
+                        <h1 class="title1">La solución de firma digital que <span>acelera tu gestión documental</span></h1>
+                        <p>Las empresas que gestionan altos volúmenes de documentación necesitan firmar de forma ágil, segura y conforme a la ley. Firmalo Ya digitaliza el proceso de firma, garantiza validez legal y centraliza todo el proceso en una plataforma conectada y fácil de usar.</p>
+                        <button class="cta-primary"><a href="#formulario" class="ancla">Agenda una demo</a></button>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+        </section>
+        <section class="integraciones-section">
+            <div class="content-integraciones pt-100">
+                <div class="texto-integraciones">
+                <a href=""><button>Firmalo Ya</button></a>
+                <h2 class="title3">Transforma la firma digital <br>en tu <span>ventaja competitiva</span></h2>
+                <p>Convierte la gestión documental en tu motor de eficiencia con una plataforma que asegura el cumplimiento legal y maximiza la velocidad en cada firma.</p>
+            </div>
+            <div class="grid-integraciones">
+                <div class="items-integraciones">
+                    <img src="./img/icon-circle/Icon-19.png" alt="">
+                    <h3>Firma electrónica segura y legal</h3>
+                    <p>Cumple con las normativas vigentes y garantiza la validez jurídica de cada documento.</p>
+                </div>
+                <div class="items-integraciones">
+                    <img src="./img/icon-circle/Icon-20.png" alt="">
+                    <h3>Implementación simple, rápida y eficiente</h3>
+                    <p>Adapta la plataforma cloud lista para usar a tu infraestructura sin necesidad de instalaciones adicionales.</p>
+                </div>
+                <div class="items-integraciones">
+                    <img src="./img/icon-circle/Icon-11.png" alt="">
+                    <h3>Ahorro de tiempo y costos operativos</h3>
+                    <p>Sigue en tiempo real el estado de cada firma y elimina el papel para optimizar al máximo tus procesos.</p>
+                </div>
+                <div class="items-integraciones">
+                    <img src="./img/icon-circle/Icon-17.png" alt="">
+                    <h3>Seguridad y controles avanzados</h3>
+                    <p>Protege tus datos con encriptación, autenticación en dos pasos y almacenamiento criptográfico.</p>
+                </div>
+                <div class="items-integraciones">
+                    <img src="./img/icon-circle/Icon-18.png" alt="">
+                    <h3>Firma desde cualquier dispositivo</h3>
+                    <p>Accede y firma documentos desde la web, tablet o celular, sin importar dónde te encuentres.</p>
+                </div>
+            </div>
+            <div class="cta-integraciones">
+                <a href="#formulario" class="ancla"><button>Conoce más</button></a>
+            </div>
+            </div>
+        </section>
+    <section class="gestion-section">
+            <div class="content-firmas-card">
+                <div class="texto-gestion">
+                    <h2 class="title2">Todo lo que necesitas para firmar con <br><span>agilidad, seguridad y cumplimiento legal</span></h2>
+                    <p>Firmalo Ya ofrece funcionalidades que combinan tecnología avanzada con una experiencia simple y flexible, para adaptarse a los distintos escenarios de tu organización.</p>
+                </div>
+                <div class="content-card-ong">
+                    <div class="ong-card">
+                        <h4>Firma digital de ley y firma electrónica</h4>
+                        <p>Garantiza la validez jurídica de todos los documentos firmados, incluyendo certificados digitales emitidos por la plataforma o por entidades certificantes.</p>
+                    </div>
+                    <div class="ong-card">
+                        <h4>Workflows de firma configurables</h4>
+                        <p>Diseña circuitos personalizados para cada tipo de documento, asignando responsables y orden de firma según tu flujo operativo.</p>
+                    </div>
+                    <div class="ong-card">
+                        <h4>Enrolamiento rápido y simple</h4>
+                        <p>Envía una invitación y el usuario ya puede empezar a firmar. Sin procesos complicados ni instalaciones técnicas.</p>
+                    </div>
+                    <div class="ong-card">
+                        <h4>Aplicación móvil para Android</h4>
+                        <p>Accede, firma y gestiona documentos desde tu celular, con filtros avanzados y visión 360° del estado de cada archivo.</p>
+                    </div>
+                    <div class="ong-card">
+                        <h4>Seguridad avanzada de datos</h4>
+                        <p>Protege la información con autenticación en dos pasos mediante Google Authenticator y almacenamiento criptográfico de la documentación.</p>
+                    </div>
+                    <div class="ong-card">
+                        <h4>Historial de visualización</h4>
+                        <p>Consulta un registro detallado de todas las acciones realizadas sobre cada documento.</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class="realidadOperativa-section">
+        <div class="content-firmaRealidad">
+            <div class="skew-gg"></div>
+            <div class="texto-gestion">
+                    <h2 class="title4 pt-50">Firma digital adaptada a<br><span>tu realidad operativa</span></h2>
+                    <p>Firmalo Ya ofrece funcionalidades específicas para cada industria, adaptándose a los flujos, regulaciones y documentos clave de tu organización.</p>
+            </div>
+            <div class="content-card-firma">
+                    <div class="firma-card red-card">
+                        <h4>Recursos Humanos</h4>
+                        <p>Digitaliza la firma de recibos de sueldo, documentación laboral, libro ley y procesos de onboarding. Integración directa con plataformas como Numbit People para una gestión sin fricciones.</p>
+                    </div>
+                    <div class="firma-card yellow-card">
+                        <h4>Sector Salud</h4>
+                        <p>Cumple con los requerimientos de la Superintendencia de Salud firmando expedientes, documentos de integración y formularios SURGE con validez legal y trazabilidad.</p>
+                    </div>
+                    <div class="firma-card gray-card">
+                        <h4>Otros sectores</h4>
+                        <p>Gestiona la firma de contratos, acuerdos, documentos fiscales y legales, licitaciones y más. Ideal para cualquier flujo que requiera validación de múltiples partes, con total control y seguridad.</p>
+                    </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="orgullo-section">
+        <div class="content-orgullo">
+            <div class="skew-bb"></div>
+            <div class="texto-orgullo">
+                <h2 class="title3"><span>Empresas que confían</span> <br>en nuestro trabajo</h2>
+                <p>Estas son algunas de las compañías que ya transformaron sus procesos <br>de gestión gracias a nuestras soluciones.</p>
+            </div>
+            <div class="skew-d"></div>      
+        </div>
+           <div class="gallery-logos">
+                <div class="logos-clientes-gallery logos-clientes-grid-5">
+                        <img src="./img/LOGOS-CLIENTES/Sancor.png" alt="Cliente 7" style="max-width: 200px;">
+                        <img src="./img/LOGOS-CLIENTES/Ypf.png" alt="Cliente 10" style="max-width: 200px;">
+                        <img src="./img/LOGOS-CLIENTES/APS.png" alt="Cliente 8" style="max-width: 200px;">
+                        <img src="./img/LOGOS-CLIENTES/Apsot.png" alt="Cliente 13" style="max-width: 200px;">
+                        <img src="./img/LOGOS-CLIENTES/SUTIAGA.png" alt="Cliente 2" style="max-width: 100px;">
+               </div>
+            </div>
+    </section>
+    <section class="formulario-section" id="formulario">
+        <div class="content-formulario">
+            <div class="info-contacto">
+                <h3>¿Todo listo para dejar <br>atrás el papel y las firmas manuales?</h3>
+                <p>Descubre cómo Firmalo Ya puede ayudarte a digitalizar tus procesos, reducir costos y ganar eficiencia con una solución legal, segura y fácil de implementar.</p>
+                <div class="redes">  
+                <a href="https://www.linkedin.com/company/mastersoft" target="_blank"><img src="./img/Linkedin-red.svg" alt="LinkedIn"></a>              
+                <a href="https://www.instagram.com/mastersoft.ok/" target="_blank"><img src="./img/Instagram-red.svg" alt="Instagram"></a>                
+                <a href="https://www.youtube.com/@mastersoftargentina" target="_blank"><img src="./img/Youtube-red.svg" alt="Facebook"></a>
+            </div>
+            </div>
+            <div class="formulario">
+                <form id="contact-form" action="https://formspree.io/f/yourFormID" method="POST" class="form">
+                        <label>                            
+                            <input type="text" name="nombre" placeholder="Nombre y apellido*" required>
+                        </label>
+                        <label>                           
+                            <input type="email" name="email" placeholder="Email*" required>
+                        </label>
+                        <label>                           
+                            <input type="text" name="empresa" placeholder="Empresa*" required>
+                        </label>
+                        <label>                            
+                            <input type="tel" name="telefono" placeholder="Teléfono" style="width: 40%;">
+                        </label>
+
+                        <p>Productos de interés:</p>
+                        <div class="checkbox-group">
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="checkbox1">
+                                <label for="checkbox1">Plataforma ERP</label>
+                            </div>
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="checkbox2">
+                                <label for="checkbox2">Solución para Salud</label>
+                            </div>
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="checkbox3">
+                                <label for="checkbox3">Sistema para RRHH</label>
+                            </div>
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="checkbox4">
+                                <label for="checkbox4">Firma Digital</label>
+                            </div>
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="checkbox5">
+                                <label for="checkbox5">Otros productos/servicios</label>
+                            </div>
+                        </div>
+
+                        <label>
+                            Deja tu comentario*
+                            <textarea name="comentario" required></textarea>
+                        </label>
+
+                        <button type="submit">Solicita tu diagnóstico gratuito</button>
+                </form>
+
+                <!-- Mensaje oculto -->
+                <div id="thank-you-message" style="display: none; color: green; font-weight: bold; margin-top: 20px;">
+                ¡Gracias! Tu mensaje fue enviado correctamente.
+                </div>
+             </div>
+        </div>
+
+    </section>
+ <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="./img/logo-mastersoft2.png" alt="MasterSoft Logo">
+        </div>
+        <div class="footer-links">
+            <ul class="footer-list">
+                <li class="li-text"><strong>Oficina central</strong></li>
+                <li>Estados Unidos 2259 <br>C.A.B.A., Argentina</li>
+                <li><a href="mailto:info@mastersoft.com.ar" class="email-footer">info@mastersoft.com.ar</a> <br>5365-5947 / 4941-2324</li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li class="li-text"><strong>Productos</strong></li>
+                <li><a href="productos-numbit">ERP</a></li>
+                <li><a href="productos-rrhh">RRHH</a></li>
+                <li><a href="#">HIS - Gestión Salud</a></li>
+                <li><a href="productos-firmaElectronica">Firma Electrónica</a></li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li><a href="#">Quiero ser distribuidor</a></li>
+                <li><a href="#">Política de calidad</a></li>
+                <li><a href="#">Quiero trabajar en Mastersoft</a></li>                
+            </ul>
+            <div class="redes">  
+                <a href="https://www.linkedin.com/company/mastersoft" target="_blank"><img src="./img/Linkedin.svg" alt="LinkedIn"></a>              
+                <a href="https://www.instagram.com/mastersoft.ok/" target="_blank"><img src="./img/Instagram.svg" alt="Instagram"></a>                
+                <a href="https://www.youtube.com/@mastersoftargentina" target="_blank"><img src="./img/Youtube.svg" alt="Facebook"></a>
+            </div>
+        </div>
+        </div>
+        <div class="copy">
+            <p>© 2023 MasterSoft. Todos los derechos reservados.</p>
+        </div>
+ </footer>
+ <div class="whatsapp">
+    <a href="https://wa.me/5491164496874" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat en WhatsApp">
+    <img src="./img/logo-whatsapp.png" alt="WhatsApp">
+    <span class="tooltip">¿Querés chatear?</span>
+  </a>
+ </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./slick-slider/slick.min.js"></script>
+    <script src="./slick-slider/slick.js"></script>
+    <script src="script.js"></script>    
+</body>
+</html>
