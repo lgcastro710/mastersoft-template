@@ -1987,7 +1987,7 @@ footer {
         display: block;
         position: absolute;
         top: 140px;
-        background-color: #e1e1e1;
+        background-color: #f6f6f5;
         z-index: 1;
         width: 100%;
         left: 0;
@@ -2007,6 +2007,9 @@ footer {
     nav ul.show-menu li a:hover {
         border: none;
     }
+    .dropdown{
+        width: 100%;
+    }
      .dropdown-menu {
       position: relative;
         margin-left: 0px;
@@ -2015,6 +2018,33 @@ footer {
     .menu-next {
         display: flex;
         justify-content: flex-end;
+    }
+    
+    .submenu-content{
+        opacity: 0;
+        display: none;
+        position: relative;
+        top: 0;
+        left: 0;
+        min-width: 250px;
+        background: #f6f6f5;
+        border-radius: 0 ;
+        margin-left: 0px;
+        z-index: 1;
+        transition: all .5s;
+    }
+    .submenu:hover .submenu-content{
+        opacity: 1;
+        display: block;
+        border-bottom: 2px solid var(--gray-color);
+    }
+    .items-submenu{
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .submenu:hover> .items-submenu span{
+        transform: rotate(-180deg);
     }
     /* end nav menu */
     /* section hero */
@@ -2059,7 +2089,7 @@ footer {
     height: 75vh !important;
 }
 .img-hero-erp{
-    height: 75vh !important;
+    height: 77vh !important;
 }
 .img-hero-sysmed{
     height: 75vh !important;
@@ -2228,14 +2258,14 @@ footer {
     grid-template-columns: 1fr;
 }
 .card-section-ong {
-    padding: 50px 20px 50px;
+    padding: 50px 20px 100px;
 }
 .content-firmas-card {
     padding: 0px 20px 50px;
 }
 .content-card-ong {
     grid-template-columns: 1fr;
-    padding: 50px 20px 0px;
+    padding: 50px 20px 50px;
 }
 .cuadroFirma-section {
     padding: 50px 20px 50px;
@@ -2289,9 +2319,13 @@ footer {
 .content-respaldo {
     grid-template-columns: 1fr;
     margin-top: 0px;
+    gap: 0;
 }
 .section-grid-calidad{
     padding: 70px 20px 0;
+}
+.section-grid-sysmed{
+    padding: 50px 20px 100px;
 }
 .grid-calidad{
     grid-template-columns: 1fr;
@@ -2347,12 +2381,21 @@ footer {
     line-height: 26px;
     text-align: left;
 }
+.texto-orgullo br{
+    display: none;
+}
   .skew-b{
     height:60px;
   }
   .skew-bb{
     height:60px;
     margin-top: -60px;
+  }
+.skew-d{
+    height:50px;
+  }
+.skew-g{
+    height:100px;
   }
   .logos-clientes{
     background: #F1F1F1;
@@ -2521,8 +2564,12 @@ footer {
     grid-template-columns: 1fr 1fr;
     row-gap: 30px;
 }
-
-
+.logos-clientes-grid-5 img {
+    max-width: 130px;
+}
+.logos-clientes-grid-6 {
+    padding: 80px 0 100px;
+}
 .video-section {
     background: #fdfdfd;
     padding: 100px 20px;
