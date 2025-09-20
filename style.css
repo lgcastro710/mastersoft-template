@@ -94,6 +94,7 @@ html {
 }
 .title2 span{
     color: var(--secondary-color);
+    white-space: normal !important;
 }
 .title3 {
     color: var(--white-color);
@@ -139,11 +140,39 @@ html {
 .cta-primary:hover {
         background: #97212e;
     }
-    .cta-primary a{
+.cta-primary a{
         color: var(--white-color);
         text-decoration: none;
     }
-
+.cta-ovalado{
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 36px;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    width: fit-content;
+    transition: background 0.3s ease;
+  }
+.cta-ovalado:hover {
+        background: #97212e;
+    }
+.cta-ovalado a{
+        color: var(--white-color);
+        text-decoration: none;
+    }
+.bullet{
+    background-color: var(--gray-color);
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 3px;
+}
     /* end utilities */
 /* Menú */
 header {
@@ -273,6 +302,32 @@ nav button{
     .dropdown.open .dropdown-menu {
       display: block;
     }
+    .submenu{
+        position: relative;
+    }
+    .submenu-content{
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        min-width: 250px;
+        background: #f6f6f5;
+        border-radius: 0 8px 8px 0px;
+        margin-left: 0px;
+        z-index: 1;
+        transition: all .5s;
+    }
+    .submenu:hover .submenu-content{
+        opacity: 1;
+    }
+    .items-submenu{
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .submenu:hover> .items-submenu span{
+        transform: rotate(-90deg);
+    }
 .align-cta{
     display: flex;
     justify-content: flex-end;
@@ -369,6 +424,11 @@ nav button{
     position: relative;    
     height: 90vh;
 }
+.hero-section-max{
+    padding-top: 140px;
+    position: relative;    
+    height: 90vh;
+}
 .img-slider1{
     background-image: url("./img/Home_Slide1.png");
     background-size: cover;
@@ -395,6 +455,42 @@ nav button{
 }
 .img-hero-erp{
     background-image: url("./img/MasterSoft_Erp_hero.png");
+    background-size: cover;
+    background-position: center;
+    height: 90vh !important;
+}
+.img-hero-sysmed{
+    background-image: url("./img/MasterSoft_Sysmed_Hero.png");
+    background-size: cover;
+    background-position: center;
+    height: 90vh !important;
+}
+.img-hero-sysmedFinaciadores{
+    background-image: url("./img/MasterSoft_SysmedFinanciadores_Hero.png");
+    background-size: cover;
+    background-position: center;
+    height: 90vh !important;
+}
+.img-hero-sysmedPrestadores{
+    background-image: url("./img/MasterSoft_SysmedPrestadores_Hero.png");
+    background-size: cover;
+    background-position: center;
+    height: 90vh !important;
+}
+.img-hero-calidad{
+    background-image: url("./img/MasterSoft_calidad_Hero.png");
+    background-size: cover;
+    background-position: center;
+    height: 90vh !important;
+}
+.img-hero-redPartners{
+    background-image: url("./img/MasterSoft_partners_Hero.png");
+    background-size: cover;
+    background-position: center;
+    height: 90vh !important;
+}
+.img-hero-distribuidora{
+    background-image: url("./img/Mastersoft-distribuidora_Hero.png");
     background-size: cover;
     background-position: center;
     height: 90vh !important;
@@ -478,6 +574,18 @@ nav button{
     width: 100%;
     height: 350px;
     background-image: url("./img/diagonal-rojo.png");
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+.hero-section-max::after{
+    content: '';
+    position: absolute;
+    bottom: -95px;
+    left: 0;
+    width: 100%;
+    height: 215px;
+    background-image: url("./img/diagonal-rojo-2.png");
     background-size: cover;
     background-position: center;
     z-index: 1;
@@ -626,6 +734,38 @@ nav button{
     text-align: right;
 }
 /* end section soluciones */
+/* section aliados */
+.aliados-section{
+    background: #f1f0f0;
+    padding: 100px 0;
+}
+.content-aliados {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    align-items: baseline;
+    justify-items: center;
+}
+.info-aliados h3{
+    padding-top: 40px;
+}
+.info-aliados p {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 35px;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-color);
+    margin-bottom: 50px;
+}
+.aliados-card{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+/* end section aliados */
 /* end section tecnologia */
 .tecnoligia-section {
     position: relative;
@@ -724,8 +864,12 @@ nav button{
     border-radius: 8px 8px 0 0;
     background: var(--primary-color);
 }
-.realidadOperativa-section {
+.cuadroFirma-section {
     background: #f1f0f0;
+    padding: 50px 0 100px;
+}
+.realidadOperativa-section {
+    background: var(--white-color);
     padding: 50px 0 100px;
 }
 .content-card-firma {
@@ -937,6 +1081,9 @@ nav button{
     align-items: center;
     gap: 50px;
 }
+.grid-calidad{
+    grid-template-columns: 1.5fr 1fr;
+}
 .content-respaldo{
     margin-top: 50px;
 }
@@ -950,6 +1097,14 @@ nav button{
 .img-respaldo2{
     background-image: url("./img/apreton-de-manos-de-empresarios-reunidos-en-la-oficina2.png");
     background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+.img-respaldo-calidad{
+    background-image: url("./img/certified-iso.png");
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
     width: 100%;
     height: 100%;
@@ -1008,7 +1163,7 @@ nav button{
     text-align: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 0;
+    padding: 15px 0;
 }
 .texto-orgullo p{
     font-size: 20px;
@@ -1031,6 +1186,14 @@ nav button{
     left:0px;
     margin-top: -100px;
     background: linear-gradient(to right top, var(--secondary-color) 49%, transparent 50%);
+  }
+  .skew-gb{
+    width:100%;
+    height:100px;
+    position:absolute;
+    left:0px;
+    margin-top: -100px;
+    background: linear-gradient(to right top, var(--white-color) 49%, #f1f0f0 50%);
   }
   .skew-d{
     width:100%;
@@ -1600,6 +1763,24 @@ footer {
     justify-items: center;
     align-items: center;
 }
+.logos-clientes-grid-5 img {
+    max-width: 200px;
+    height: auto;
+    object-fit: contain;
+}
+.logos-clientes-grid-3 {
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+.logos-clientes-grid-3 img {
+    max-width: 180px;
+    height: auto;
+    object-fit: contain;
+}
 /*  styles gestion */
 .gestion-section {
     background: #ffffff;
@@ -1620,6 +1801,9 @@ footer {
     line-height: 35px;
     font-family: 'Open Sans', sans-serif;
     color: var(--text-color);
+}
+.texto-gestion img{
+    max-width: 300px;
 }
 .features-section {
   max-width: 1200px;
@@ -1781,6 +1965,9 @@ footer {
     font-size: 34px;
     text-align: center;
 }
+.title4 br{
+    display: none;
+}
     /* end utilities */
     /* nav menu */
     header{
@@ -1841,6 +2028,11 @@ footer {
     height: 120px;
     background-image: url("./img/diagonal-rojo-mobile.png");
 }
+.hero-section-max::after{
+    bottom: -50px;
+    height: 120px;
+    background-image: url("./img/diagonal-rojo-mobile.png");
+}
 .content-hero{
     grid-template-columns: 1fr;
     padding: 20px;   
@@ -1849,6 +2041,9 @@ footer {
     height: 75vh;
 }
 .hero-section2{   
+    height: 75vh;
+}
+.hero-section-max{   
     height: 75vh;
 }
 .img-slider1{
@@ -1864,6 +2059,24 @@ footer {
     height: 75vh !important;
 }
 .img-hero-erp{
+    height: 75vh !important;
+}
+.img-hero-sysmed{
+    height: 75vh !important;
+}
+.img-hero-sysmedFinaciadores{
+    height: 75vh !important;
+}
+.img-hero-sysmedPrestadores{
+    height: 75vh !important;
+}
+.img-hero-calidad{
+    height: 75vh !important;
+}
+.img-hero-redPartners{
+    height: 75vh !important;
+}
+.img-hero-distribuidora{
     height: 75vh !important;
 }
 .img-hero-IS{
@@ -1962,7 +2175,7 @@ footer {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 .card-solucion:hover {
-    display: none;
+    display: none !important;
 }
 .card-solucion br{
     display: none;
@@ -1977,6 +2190,18 @@ footer {
     align-items: center;
 }
 /* end section soluciones */
+/* section aliados */
+.aliados-section{
+    padding: 100px 20px;
+}
+.content-aliados {
+    grid-template-columns: 1fr;
+}
+.info-aliados{
+    text-align: center;
+}
+
+/* end section aliados */
 /* end section tecnologia */
 .colour-primary {
     padding-top: 50px;
@@ -2006,10 +2231,17 @@ footer {
     padding: 50px 20px 50px;
 }
 .content-firmas-card {
-    padding: 50px 20px 50px;
+    padding: 0px 20px 50px;
 }
 .content-card-ong {
     grid-template-columns: 1fr;
+    padding: 50px 20px 0px;
+}
+.cuadroFirma-section {
+    padding: 50px 20px 50px;
+}
+.texto-gestion img{
+    max-width: 200px;
 }
 .realidadOperativa-section {
     padding: 50px 20px 50px;
@@ -2058,6 +2290,12 @@ footer {
     grid-template-columns: 1fr;
     margin-top: 0px;
 }
+.section-grid-calidad{
+    padding: 70px 20px 0;
+}
+.grid-calidad{
+    grid-template-columns: 1fr;
+}
 .img-respaldo{
     height: 300px;
 }
@@ -2085,6 +2323,9 @@ footer {
 }
 .texto-respaldo p span{
     white-space: nowrap;
+}
+.texto-respaldo p{
+    max-width: 100% !important;
 }
 .logo-infocard p br {
     display: none;
@@ -2325,7 +2566,18 @@ footer {
     height: 260px;
     background-image: url("./img/diagonal-rojo-mobile.png");
 }
+.hero-section-max::after{
+    bottom: -50px;
+    height: 260px;
+    background-image: url("./img/diagonal-rojo-mobile.png");
+}
 .hero-section{   
+    height: 55vh;
+}
+.hero-section2{   
+    height: 55vh;
+}
+.hero-section-max{   
     height: 55vh;
 }
 .img-slider1{
@@ -2341,6 +2593,24 @@ footer {
     height: 55vh !important;
 }
 .img-hero-erp{
+    height: 55vh !important;
+}
+.img-hero-sysmed{
+    height: 55vh !important;
+}
+.img-hero-sysmedFinaciadores{
+    height: 55vh !important;
+}
+.img-hero-sysmedPrestadores{
+    height: 55vh !important;
+}
+.img-hero-calidad{
+    height: 55vh !important;
+}
+.img-hero-redPartners{
+    height: 55vh !important;
+}
+.img-hero-distribuidora{
     height: 55vh !important;
 }
 .img-hero-IS{
