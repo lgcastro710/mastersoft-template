@@ -34,6 +34,19 @@
       }
     });
 // toogle submenu
+document.addEventListener("DOMContentLoaded", function () {
+  const submenu = document.querySelector(".submenu");
+  const toggle = document.getElementById("toggleSubmenu");
+
+  // solo aplica en mobile
+  if (window.innerWidth <= 930) {
+    toggle.addEventListener("click", function (e) {
+      e.preventDefault(); // evita navegación accidental
+      submenu.classList.toggle("open");
+    });
+  }
+});
+
 
 // Toggle de menú móvil
    // Get the button, and when the user clicks on it, execute myFunction
