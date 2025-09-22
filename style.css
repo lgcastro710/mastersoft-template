@@ -513,6 +513,12 @@ nav button{
     background-position: center;
     height: 90vh !important;
 }
+.img-hero-nuestraCultura{
+    background-image: url("./img/Mastersoft-NuestraCultura_Hero.png");
+    background-size: cover;
+    background-position: center;
+    height: 90vh !important;
+}
 .img-hero-rrhh{
     background-image: url("./img/MasterSoft_rrhh_hero.png");
     background-size: cover;
@@ -845,10 +851,26 @@ nav button{
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
+.content-card-beneficios {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0 100px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
 .ong-card {
     background: var(--white-color);
     border-radius: 8px;
     padding: 20px 30px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+.beneficios-card {
+    background: var(--white-color);
+    border-radius: 8px;
+    padding: 20px 25px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     position: relative;
@@ -995,6 +1017,14 @@ nav button{
     color: var(--secondary-color) !important;
     text-align: left;
 }
+.yellow-card h3 {
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 30px;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--primary-color) !important;
+    text-align: left;
+}
 .gray-card h4 {
     font-size: 27px;
     font-weight: 700;
@@ -1004,6 +1034,14 @@ nav button{
     text-align: left;
 }
 .ong-card p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--gray-color);
+    text-align: left;
+}
+.beneficios-card p {
     font-size: 18px;
     font-weight: 500;
     line-height: 30px;
@@ -1480,6 +1518,40 @@ nav button{
   color: #555;
   cursor: pointer;
 }
+ .custom-file {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Ocultar input nativo */
+  .custom-file input[type="file"] {
+    display: none;
+  }
+
+  /* Botón estilizado */
+  .file-label {
+    background-color: var(--background-color);
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+  }
+
+  .file-label:hover {
+    background-color: var(--text-color);
+    color: var(--white-color);
+  }
+
+  /* Nombre del archivo */
+  .file-name {
+    font-size: 14px;
+    color: #555;
+    font-style: italic;
+  }
 /* end section formulario */
 /* syles footer */
 footer {
@@ -2123,6 +2195,9 @@ footer {
 .img-hero-ong{
     height: 75vh !important;
 }
+.img-hero-nuestraCultura{
+    height: 75vh !important;
+}
 .img-hero-rrhh{
     height: 80vh !important;
 }
@@ -2269,6 +2344,10 @@ footer {
     padding: 0px 20px 50px;
 }
 .content-card-ong {
+    grid-template-columns: 1fr;
+    padding: 50px 20px 50px;
+}
+.content-card-beneficios {
     grid-template-columns: 1fr;
     padding: 50px 20px 50px;
 }
@@ -2672,6 +2751,9 @@ footer {
     height: 55vh !important;
 }
 .img-hero-ong{
+    height: 55vh !important;
+}
+.img-hero-nuestraCultura{
     height: 55vh !important;
 }
 .img-hero-rrhh{
