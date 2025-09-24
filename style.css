@@ -1331,6 +1331,12 @@ nav button{
     background: var(--primary-color);
     padding: 100px 0 100px;
 }
+    .eapps-instagram-feed-posts-item-image-ratio-1-1 .eapps-instagram-feed-posts-item-image-wrapper{
+        height: 80px !important;
+    }
+    .eapps-instagram-feed-posts-item-image-portrait .eapps-instagram-feed-posts-item-image{
+        height: 350px !important;
+    }
     .eapps-widget:hover .eapps-widget-toolbar{
       display:  none !important;
     }
@@ -2502,6 +2508,12 @@ footer {
 }
     .eapps-widget:hover .eapps-widget-toolbar{
       display:  none !important;
+    }
+    .eapps-instagram-feed-posts-item-image-ratio-1-1 .eapps-instagram-feed-posts-item-image-wrapper{
+        height: auto !important;
+    }
+    .eapps-instagram-feed-posts-item-image-portrait .eapps-instagram-feed-posts-item-image{
+        height: 350px !important;
     }
     .content-fedd br{
         display: block;
