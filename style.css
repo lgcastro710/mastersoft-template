@@ -144,6 +144,26 @@ html {
         color: var(--white-color);
         text-decoration: none;
     }
+.cta-secundary{
+    background: var(--secondary-color);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    width: fit-content;
+    transition: background 0.3s ease;
+  }
+.cta-secundary:hover {
+        background: #c48834;
+    }
+.cta-secundary a{
+        color: var(--white-color);
+        text-decoration: none;
+    }
 .cta-ovalado{
     background: var(--primary-color);
     color: var(--secondary-color);
@@ -1356,6 +1376,14 @@ nav button{
         text-align: center;
         margin-bottom: 50px;
     }
+    .content-fedd a{
+        display: flex;
+        justify-content: center;
+        text-decoration: none !important;
+    }
+    .fedd-cards{
+        margin-top: 30px;
+    }
     .eapps-instagram-feed-title{
         display: none !important;
     }
@@ -1406,6 +1434,37 @@ nav button{
     color: var(--text-color);
     text-align: left;
     margin-bottom: 30px;
+}
+.desafios-section {
+    background-color: var(--white-color);  
+    padding: 100px 0;
+}
+.desafios{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.desafios .redes{
+    justify-content: center;
+    margin-top: 50px;
+}
+.desafios h3 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 55px;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-color);
+    text-align: center;
+}
+.desafios p {
+    font-size: 20px;
+    line-height: 35px;
+    font-family: 'Nunito', sans-serif;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+.email-empleo{
+    color: var(--primary-color);
 }
 .formulario{
     display: flex;
