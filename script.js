@@ -174,11 +174,3 @@ document.addEventListener("DOMContentLoaded", function() {
 }, 50);
 });
 
- // Mostrar nombre del archivo seleccionado
-  const inputFile = document.getElementById("cv");
-  const fileName = document.querySelector(".file-name");
-
-  inputFile.addEventListener("change", () => {
-    fileName.textContent = inputFile.files.length > 0 ? inputFile.files[0].name : "Ningún archivo seleccionado";
-  });
-

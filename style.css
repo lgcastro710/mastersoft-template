@@ -557,7 +557,7 @@ nav button{
 
 .slick-dots {
     position: relative !important;
-    bottom: 200px !important;
+    bottom: 100px !important;
     display: block;
     padding: 0;
     margin: 0 auto !important;
@@ -592,6 +592,7 @@ nav button{
     color: var(--primary-color);
     
 } 
+/* 
 .hero-section::after{
     content: '';
     position: absolute;
@@ -603,7 +604,7 @@ nav button{
     background-size: cover;
     background-position: center;
     z-index: 1;
-}
+} */
 .hero-section-max::after{
     content: '';
     position: absolute;
@@ -824,7 +825,9 @@ nav button{
 }
 .btn-img{
     background: var(--white-color) !important;
-
+    padding: 15px 35px;
+    border: none;
+    border-radius: 36px;
 }
 .btn-img img{
     max-width: 120px;
@@ -1276,6 +1279,32 @@ nav button{
     margin-top: -100px;
     background: linear-gradient(to right top, #fff 49%, #f1f0f0 50%);
     transform: rotateX(180deg);
+  }
+  .section-franja{
+    position: relative;
+    width: 100%;
+  }
+  .franja-color{
+    height: 50px;
+    width: 100%;
+    background: var(--primary-color);
+  }
+    .skew-top{
+    width:100%;
+    height:70px;
+    position:absolute;
+    left:0px;
+    margin-top: -70px;
+    background: linear-gradient(to right top, transparent 49%, var(--primary-color) 50%);
+    transform: rotateX(180deg);
+  }
+    .skew-bottom{
+    width:100%;
+    height:100px;
+    position:absolute;
+    left:0px;
+    margin-top: 0px;
+    background: linear-gradient(to right top, transparent 49%, var(--primary-color) 50%);
   }
   .logos-clientes{
     background: #F1F1F1;
@@ -2545,6 +2574,17 @@ footer {
   }
 .skew-g{
     height:100px;
+  }
+
+  .franja-color{
+    height: 30px;
+  }
+    .skew-top{
+    height:65px;
+    margin-top: -65px;;
+  }
+    .skew-bottom{
+    height:50px;
   }
   .logos-clientes{
     background: #F1F1F1;
