@@ -635,7 +635,7 @@ nav button{
     gap: 50px;
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 100px;
+    padding-top: 50px;
 }
 .info-hero p {
     color: var(--white-color);
@@ -651,7 +651,7 @@ nav button{
     gap: 50px;
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 100px;
+    padding-top: 50px;
 }
 .info-hero2 p {
     color: var(--white-color);
@@ -667,7 +667,7 @@ nav button{
     gap: 50px;
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 100px;
+    padding-top: 50px;
 }
 .info-hero-carrusel p {
     color: var(--white-color);
