@@ -2448,6 +2448,9 @@ footer {
     gap: 0px;
     padding: 30px 20px ;
 }
+.info-hero-carrusel p {
+    font-size: 18px;
+}
 .info-hero{
     grid-template-columns: 1fr;
     padding-top: 70px;
@@ -2475,7 +2478,7 @@ footer {
     text-align: left;
 }
 .slick-dots {
-        bottom: 80px !important;
+        bottom: 60px !important;
         max-width: 80%;
         margin: 0 auto !important;
         text-align: center !important;
@@ -2717,14 +2720,14 @@ footer {
   }
 
   .franja-color{
-    height: 30px;
+    height: 22px;
   }
     .skew-top{
-    height:65px;
-    margin-top: -65px;;
+    height:50px;
+    margin-top: -50px;;
   }
     .skew-bottom{
-    height:50px;
+    height:35px;
   }
   .logos-clientes{
     background: #F1F1F1;
