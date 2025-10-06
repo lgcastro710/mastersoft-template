@@ -193,6 +193,28 @@ html {
     margin-right: 10px;
     margin-bottom: 3px;
 }
+.pastilla-red{
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 12px 24px;
+    border-radius: 36px;
+    font-weight: 600;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    width: fit-content;
+    margin: 0 auto 20px;
+}
+.pastilla-yellow{
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 12px 24px;
+    border-radius: 36px;
+    font-weight: 600;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    width: fit-content;
+    margin: 0 auto 20px;
+}
     /* end utilities */
 /* Menú */
 header {
@@ -828,6 +850,9 @@ nav button{
     padding: 15px 35px;
     border: none;
     border-radius: 36px;
+    width: min-content;
+    margin: 0 auto;
+    margin-bottom: 20px;
 }
 .btn-img img{
     max-width: 120px;
@@ -1313,23 +1338,7 @@ nav button{
     .logos-clientes img{
         max-width: 130px;
     }
-        @-webkit-keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-250px * 13));
-    }
-  }
-  
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-250px * 13));
-    }
-  }
+
   .slider-home {
     background: linear-gradient(90deg, #F1F1F1 38.02%, rgba(255, 255, 255, 0) 100%);
     height: 100px;
@@ -1363,7 +1372,26 @@ nav button{
     left: 0;
     top: 0;
   }
-  .slider-home .slide-logos {
+/* end section orgullo */
+/* section slider logos */
+        @-webkit-keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 13));
+    }
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 13));
+    }
+  }
+    .slider-home .slide-logos {
     -webkit-animation: scroll 40s linear infinite;
             animation: scroll 40s linear infinite;
     display: grid;
@@ -1374,7 +1402,119 @@ nav button{
     width: calc(250px * 26);
     background: linear-gradient(90deg, #F1F1F1 38.02%, rgba(255, 255, 255, 0) 100%);
   }
-/* end section orgullo */
+     @-webkit-keyframes scrolls {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 7));
+    }
+  }
+  
+  @keyframes scrolls {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 7));
+    }
+  }
+    .slider-home .slide-logosSysmed {
+    -webkit-animation: scrolls 40s linear infinite;
+            animation: scrolls 40s linear infinite;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    grid-template-columns: repeat(14, 1fr);
+    width: calc(250px * 14);
+    background: linear-gradient(90deg, #F1F1F1 38.02%, rgba(255, 255, 255, 0) 100%);
+  }
+      @-webkit-keyframes scroll8 {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 8));
+    }
+  }
+  
+  @keyframes scroll8 {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 8));
+    }
+  }
+   .slider-home .slide-logos8 {
+    -webkit-animation: scroll8 40s linear infinite;
+            animation: scroll8 40s linear infinite;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    grid-template-columns: repeat(16, 1fr);
+    width: calc(250px * 16);
+    background: linear-gradient(90deg, #F1F1F1 38.02%, rgba(255, 255, 255, 0) 100%);
+  }
+    @-webkit-keyframes scroll12 {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 12));
+    }
+  }
+  
+  @keyframes scroll12 {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 12));
+    }
+  }
+   .slider-home .slide-logos12 {
+    -webkit-animation: scroll12 40s linear infinite;
+            animation: scroll12 40s linear infinite;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    grid-template-columns: repeat(24, 1fr);
+    width: calc(250px * 24);
+    background: linear-gradient(90deg, #F1F1F1 38.02%, rgba(255, 255, 255, 0) 100%);
+  }
+    @-webkit-keyframes scroll6 {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 6));
+    }
+  }
+  
+  @keyframes scroll6 {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 6));
+    }
+  }
+   .slider-home .slide-logos6 {
+    -webkit-animation: scroll6 40s linear infinite;
+            animation: scroll6 40s linear infinite;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    grid-template-columns: repeat(12, 1fr);
+    width: calc(250px * 12);
+    background: linear-gradient(90deg, #F1F1F1 38.02%, rgba(255, 255, 255, 0) 100%);
+  }
+/* end section slider logos */
 /* sction feed */
 .fedd-section{
     background: var(--primary-color);
@@ -2024,7 +2164,7 @@ footer {
     color: var(--secondary-color);
     padding: 12px 24px;
     border-radius: 36px;
-    border: navajowhite;
+    border: none;
     font-weight: 600;
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
@@ -2596,10 +2736,13 @@ footer {
  .slider-home::before, .slider-home::after {
     width: 50px;
   }
-
-  .slider-home .slide-logos {
-    width: calc(210px * 24);}
 /* end section orgullo */
+/* section slider logos */
+.slider-home .slide-logos {
+    width: calc(210px * 26);}
+    .slider-home .slide-logosSysmed {
+    width: calc(210px * 14);}
+/* end section slider logos */
 /* sction feed */
 .fedd-section{
     background: var(--primary-color);
@@ -2714,15 +2857,10 @@ footer {
 
 .tabs {
     display: flex;
-    flex-wrap: nowrap;         
+    flex-direction: column;       
     gap: 10px;
     margin-bottom: 20px;
-    overflow-x: auto;           
-    overflow-y: hidden;         
-    -webkit-overflow-scrolling: touch; 
-    scrollbar-width: none; 
-    border-radius: 36px 0 0 36px;
-    margin-left: 20px;
+    border: none;
 }
 .tabs::-webkit-scrollbar {
     display: none;         
@@ -2740,7 +2878,7 @@ footer {
 }
 .tab-content.active {
     display: block;
-    padding: 0 20px;
+    padding: 100px 20px 0;
 }
 .tabs-group{
     position: relative; /* Necesario por el absolute */
