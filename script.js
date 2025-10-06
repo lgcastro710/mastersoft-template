@@ -93,7 +93,7 @@ $(document).ready(function () {
       infinite: true,
       autoplaySpeed: 8000,
         slidesToShow: 1,
-       adaptiveHeight: true,
+       adaptiveHeight: false,
       arrows: false,
       dots: true
     });
