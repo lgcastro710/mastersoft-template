@@ -173,4 +173,3 @@ document.addEventListener("DOMContentLoaded", function() {
   if (linkBranding) linkBranding.style.display = 'none';
 }, 50);
 });
-

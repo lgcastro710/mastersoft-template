@@ -90,7 +90,7 @@
             </div>
         </section>
         <section class="integraciones-section">
-            <div class="content-integraciones pt-100">
+            <div class="content-integraciones pt-50">
                 <div class="texto-integraciones">
                 <h2 class="title3"><span>Optimiza la administración</span> <br>de tu asociación profesional u ONG</h2>
                 <p>Diseñada específicamente para los procesos, necesidades y desafíos de las organizaciones sin fines de lucro, nuestra solución ERP ya ayudó a múltiples instituciones a:</p>
@@ -132,7 +132,7 @@
                 <h2 class="title2">Herramientas que acompañan el <br><span>crecimiento de tu organización</span></h2>
                 <p>Automatización, integración y control en una única plataforma. Gestioná cuotas, pagos, <br>compras y comunicación con asociados de forma ágil y profesional.</p>
             </div>
-         <div class="content-card-ong">
+         <div class="content-card-ong version-desktop">
             <div class="ong-card">
                 <h4>Gestión automatizada de ingresos y cuotas</h4>
                 <p>Configura cuotas periódicas según tipo de socio y emite facturas electrónicas automáticamente, integradas con el padrón.</p>
@@ -158,6 +158,62 @@
                 <p>Consulta credenciales, accede a facturas, recibe notificaciones push y mantente informado desde el celular.</p>
             </div>
          </div>
+         <div class="accordion version-mobile">
+                <div class="accordion-item">
+                    <button class="accordion-header item-red">
+                        <h4>Gestión automatizada de ingresos y cuotas</h4>
+                        <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Configura cuotas periódicas según tipo de socio y emite facturas electrónicas automáticamente, integradas con el padrón.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header item-red">
+                        <h4>Cobro electrónico centralizado</h4>
+                        <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Ofrece múltiples medios de pago, imprime boletas online, envía recordatorios automáticos y registrá pagos de forma instantánea.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header item-red">
+                        <h4>Notificaciones personalizadas</h4>
+                        <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Avisa vencimientos o envía facturas directamente por email o WhatsApp, con links de pago únicos y trazabilidad en cada acción.</p>
+                    </div>
+                </div>
+                 <div class="accordion-item">
+                    <button class="accordion-header item-red">
+                        <h4>Compras y contrataciones</h4>
+                        <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Recibe facturas electrónicas, valida comprobantes y registra movimientos contables, optimizando la gestión de proveedores.</p>
+                    </div>
+                </div>
+                 <div class="accordion-item">
+                    <button class="accordion-header item-red">
+                        <h4>Cumplimiento impositivo y normativo</h4>
+                        <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Cumplimiento impositivo y normativo Emite automáticamente comprobantes vía ARCA, genera libros IVA y descarga reportes listos para entes de control.</p>
+                    </div>
+                </div>
+                 <div class="accordion-item">
+                    <button class="accordion-header item-red">
+                        <h4>App para asociados</h4>
+                        <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Consulta credenciales, accede a facturas, recibe notificaciones push y mantente informado desde el celular.</p>
+                    </div>
+                </div>
+            </div>
     </section>
     <section class="orgullo-section">
         <div class="content-orgullo">
@@ -302,6 +358,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./slick-slider/slick.min.js"></script>
     <script src="./slick-slider/slick.js"></script>
-    <script src="script.js"></script>    
+    <script src="script.js"></script> 
+            <script>
+        // acordeones
+  console.log("Script cargado");
+  const accordions = document.querySelectorAll(".accordion-header");
+
+  accordions.forEach(header => {
+    header.addEventListener("click", () => {
+      console.log("click");
+      const item = header.parentElement;
+
+      document.querySelectorAll(".accordion-item").forEach(i => {
+        if (i !== item) i.classList.remove("active");
+      });
+
+      item.classList.toggle("active");
+    });
+  });
+    </script>      
 </body>
 </html>

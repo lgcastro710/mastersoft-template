@@ -150,7 +150,7 @@
                 <h2 class="title2"><span>Beneficios</span> de ser parte <br>de Mastersoft</h2>
                 <p>En Mastersoft, cuidar de nuestro equipo es una prioridad. Por eso ofrecemos beneficios pensados para acompañar tu crecimiento y bienestar, tanto profesional como personal.</p>
             </div>
-         <div class="content-card-beneficios">
+         <div class="content-card-beneficios version-desktop">
             <div class="beneficios-card red-card">
                 <h4>Vacaciones extendidas</h4>
                 <p>Ofrecemos vacaciones fraccionables por día hábil para lograr una recarga efectiva de energías.</p>
@@ -184,6 +184,80 @@
                 <p>Acompañamos la vuelta al trabajo con un retorno gradual, respetando los tiempos y necesidades de cada persona.</p>
             </div>
          </div>
+         <div class="accordion version-mobile">
+                <div class="accordion-item">
+                    <button class="accordion-header item-red">
+                        <h4>Vacaciones extendidas</h4>
+                        <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Ofrecemos vacaciones fraccionables por día hábil para lograr una recarga efectiva de energías.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header item-gray">
+                        <h4>Modalidad híbrida flexible</h4>
+                        <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Brindamos la posibilidad de combinar trabajo remoto y presencial, facilitando el equilibrio.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header item-red">
+                        <h4>Licencias para ocasiones especiales</h4>
+                        <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Contemplamos licencias por nacimiento, casamiento o enfermedad familiar, para que estés cuando más importa.</p>
+                    </div>
+                </div>
+                 <div class="accordion-item">
+                    <button class="accordion-header item-gray">
+                        <h4>Formación y desarrollo continuo</h4>
+                        <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Implementamos programas de formación interna que impulsan el crecimiento profesional y académico.</p>
+                    </div>
+                </div>
+                 <div class="accordion-item">
+                    <button class="accordion-header item-red">
+                        <h4>Tecnología a tu alcance</h4>
+                        <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Acercamos descuentos exclusivos en productos tecnológicos mediante alianzas con marcas líderes.</p>
+                    </div>
+                </div>
+                 <div class="accordion-item">
+                    <button class="accordion-header item-gray">
+                        <h4>Descuentos y alianzas exclusivas</h4>
+                        <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Ofrecemos beneficios y descuentos en empresas de consumo masivo y en alimentos para apoyar el día a día.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header item-red">
+                        <h4>Estadías y alojamientos</h4>
+                        <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Brindamos acceso a descuentos preferenciales, a través de nuestras alianzas con empresas del sector hotelero y recreativo. </p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header item-gray">
+                        <h4>Retorno escalonado post-maternidad</h4>
+                        <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Acompañamos la vuelta al trabajo con un retorno gradual, respetando los tiempos y necesidades de cada persona.</p>
+                    </div>
+                </div>
+            </div>
     </section>
     <section class="desafios-section" id="formulario">
         <div class="desafios">
@@ -246,8 +320,24 @@
   </a>
  </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="./slick-slider/slick.min.js"></script>
-    <script src="./slick-slider/slick.js"></script>
-    <script src="script.js"></script>    
+    <script src="script.js"></script>  
+    <script>
+        // acordeones
+  console.log("Script cargado");
+  const accordions = document.querySelectorAll(".accordion-header");
+
+  accordions.forEach(header => {
+    header.addEventListener("click", () => {
+      console.log("click");
+      const item = header.parentElement;
+
+      document.querySelectorAll(".accordion-item").forEach(i => {
+        if (i !== item) i.classList.remove("active");
+      });
+
+      item.classList.toggle("active");
+    });
+  });
+    </script>  
 </body>
 </html>

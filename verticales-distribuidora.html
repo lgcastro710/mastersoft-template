@@ -132,7 +132,7 @@
                 <h2 class="title2"><span>Soluciones adaptadas</span> para <br>cada cadena de distribución</h2>
                 <p>No todas las distribuidoras trabajan igual. Nuestra plataforma se adapta a los requerimientos particulares de cada <br>sector, acompañando flujos logísticos, comerciales y normativos con precisión y flexibilidad.</p>
             </div>
-         <div class="content-card-ong">
+         <div class="content-card-ong version-desktop">
             <div class="ong-card red-card">
                 <h4>Distribuidores de neumáticos</h4>
                 <p>Consulta precios y stock multidepósito por medida, marca o modelo. Vende online con validación automática de condiciones comerciales y envía recordatorios a clientes de acuerdo al kilometraje o al tiempo transcurrido desde el último servicio.</p>
@@ -158,6 +158,62 @@
                 <p>Administra el ciclo completo: órdenes al exterior, mercadería en tránsito, nacionalización y control de stock por despacho. Vincula documentación aduanera a cada ingreso y mantén trazabilidad total en la cadena logística.</p>
             </div>
          </div>
+         <div class="accordion version-mobile">
+                <div class="accordion-item">
+                    <button class="accordion-header item-red">
+                        <h4>Distribuidores de neumáticos</h4>
+                        <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Consulta precios y stock multidepósito por medida, marca o modelo. Vende online con validación automática de condiciones comerciales y envía recordatorios a clientes de acuerdo al kilometraje o al tiempo transcurrido desde el último servicio.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header item-yellow">
+                        <h4>Repuestos de automotor</h4>
+                        <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Publica catálogos con imágenes y especificaciones técnicas, conecta cada producto a su SKU original y actualiza precios automáticamente según lista de proveedores. Integración con MercadoLibre y plataformas de ecommerce.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header item-gray">
+                        <h4>Alimentos, bebidas y consumo masivo</h4>
+                        <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Controla la reposición en góndola con apps móviles, integra balanzas y optimiza el armado de repartos con herramientas logísticas. Gestiona promociones, vencimientos y stock por canal, cliente o punto de venta.</p>
+                    </div>
+                </div>
+                 <div class="accordion-item">
+                    <button class="accordion-header item-red">
+                        <h4>Industria química</h4>
+                        <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Asocia certificados de análisis y hojas de seguridad a cada lote. Emite documentación técnica por pedido, garantiza el cumplimiento de normativas y simplifica las entregas con trazabilidad desde producción hasta cliente.</p>
+                    </div>
+                </div>
+                 <div class="accordion-item">
+                    <button class="accordion-header item-yellow">
+                        <h4>Insumos para la salud</h4>
+                        <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Desde materiales de cirugía hasta implantes y productos ortopédicos, controla stock (por lote y vencimiento) y consumos por paciente. Integración con ANMAT, trazabilidad completa y reportes automáticos listos para auditorías regulatorias o fiscalizaciones internas.</p>
+                    </div>
+                </div>
+                 <div class="accordion-item">
+                    <button class="accordion-header item-gray">
+                        <h4>Importadores</h4>
+                        <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Administra el ciclo completo: órdenes al exterior, mercadería en tránsito, nacionalización y control de stock por despacho. Vincula documentación aduanera a cada ingreso y mantén trazabilidad total en la cadena logística.</p>
+                    </div>
+                </div>
+            </div>
     </section>
     <section class="orgullo-section">
         <div class="content-orgullo">
@@ -315,6 +371,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./slick-slider/slick.min.js"></script>
     <script src="./slick-slider/slick.js"></script>
-    <script src="script.js"></script>    
+    <script src="script.js"></script> 
+            <script>
+        // acordeones
+  console.log("Script cargado");
+  const accordions = document.querySelectorAll(".accordion-header");
+
+  accordions.forEach(header => {
+    header.addEventListener("click", () => {
+      console.log("click");
+      const item = header.parentElement;
+
+      document.querySelectorAll(".accordion-item").forEach(i => {
+        if (i !== item) i.classList.remove("active");
+      });
+
+      item.classList.toggle("active");
+    });
+  });
+    </script>      
 </body>
 </html>
