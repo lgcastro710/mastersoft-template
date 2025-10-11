@@ -2421,21 +2421,25 @@ footer {
 .title1 {
     color: var(--white-color);
     font-size: 34px;
+    line-height: 38px;
     text-align: left;
 }
 .title2 {
     color: var(--text-color);
     font-size: 34px;
+    line-height: 38px;
     text-align: left;
 }
 .title3 {
     color: var(--white-color);
     font-size: 34px;
+    line-height: 38px;
     text-align: center;
 }
 .title4 {
     color: var(--text-color);
     font-size: 34px;
+    line-height: 38px;
     text-align: center;
 }
 .title4 br{
@@ -2597,6 +2601,7 @@ footer {
 }
 .info-hero-carrusel p {
     font-size: 18px;
+    line-height: 26px;
 }
 .info-hero{
     grid-template-columns: 1fr;
@@ -2608,7 +2613,7 @@ footer {
 .info-hero p {
     color: var(--white-color);
     font-size: 18px;
-    line-height: 30px;
+    line-height: 26px;
     text-align: left;
 }
 .info-hero2{
@@ -2621,7 +2626,7 @@ footer {
 .info-hero2 p {
    color: var(--white-color);
     font-size: 18px;
-    line-height: 30px;
+    line-height: 26px;
     text-align: left;
 }
 .slick-dots {
