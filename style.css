@@ -1328,16 +1328,16 @@ nav button{
     width: 100%;
   }
   .franja-color{
-    height: 50px;
+    height: 40px;
     width: 100%;
     background: var(--primary-color);
   }
     .skew-top{
     width:100%;
-    height:70px;
+    height:50px;
     position:absolute;
     left:0px;
-    margin-top: -70px;
+    margin-top: -50px;
     background: linear-gradient(to right top, transparent 49%, var(--primary-color) 50%);
     transform: rotateX(180deg);
   }
