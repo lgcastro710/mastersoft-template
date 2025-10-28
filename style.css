@@ -463,23 +463,23 @@ nav button{
 .hero-section{
     padding-top: 140px;
     position: relative;    
-    height: 90vh;
+    height: 600px;
 }
 .hero-section2{
     padding-top: 140px;
     position: relative;    
-    height: 90vh;
+    height: 600px;
 }
 .hero-section-max{
     padding-top: 140px;
     position: relative;    
-    height: 90vh;
+    height: 600px;
 }
 .img-slider1{
     background-image: url("./img/Home_Slide1.png");
     background-size: cover;
     background-position: center;
-    min-height: 90vh; 
+    min-height: 600px; 
   display: flex;
   align-items: center;
 }
@@ -487,7 +487,7 @@ nav button{
     background-image: url("./img/Home_Slide2.png");
     background-size: cover;
     background-position: center;
-    min-height: 90vh; 
+    min-height: 600px; 
   display: flex;
   align-items: center;
 }
@@ -495,7 +495,7 @@ nav button{
     background-image: url("./img/Home_Slide3.png");
     background-size: cover;
     background-position: center;
-    min-height: 90vh; 
+    min-height: 600px; 
   display: flex;
   align-items: center;
 }
@@ -503,7 +503,7 @@ nav button{
     background-image: url("./img/Home_Slide4.png");
     background-size: cover;
     background-position: center;
-    min-height: 90vh; 
+    min-height: 600px; 
   display: flex;
   align-items: center;
 }
@@ -511,79 +511,79 @@ nav button{
     background-image: url("./img/MasterSoft_Erp_hero.png");
     background-size: cover;
     background-position: center;
-    height: 90vh !important;
+    height: 600px !important;
 }
 .img-hero-sysmed{
     background-image: url("./img/MasterSoft_Sysmed_Hero.png");
     background-size: cover;
     background-position: center;
-    height: 90vh !important;
+    height: 600px !important;
 }
 .img-hero-sysmedFinaciadores{
     background-image: url("./img/MasterSoft_SysmedFinanciadores_Hero.png");
     background-size: cover;
     background-position: center;
-    height: 90vh !important;
+    height: 600px !important;
 }
 .img-hero-sysmedPrestadores{
     background-image: url("./img/MasterSoft_SysmedPrestadores_Hero.png");
     background-size: cover;
     background-position: center;
-    height: 90vh !important;
+    height: 600px !important;
 }
 .img-hero-calidad{
     background-image: url("./img/MasterSoft_Calidad_Hero.png");
     background-size: cover;
     background-position: center;
-    height: 90vh !important;
+    height: 600px !important;
 }
 .img-hero-redPartners{
     background-image: url("./img/MasterSoft_partners_Hero.png");
     background-size: cover;
     background-position: center;
-    height: 90vh !important;
+    height: 600px !important;
 }
 .img-hero-distribuidora{
     background-image: url("./img/Mastersoft-distribuidora_Hero.png");
     background-size: cover;
     background-position: center;
-    height: 90vh !important;
+    height: 600px !important;
 }
 .img-hero-IS{
     background-image: url("./img/MasterSoft_salud_hero.png");
     background-size: cover;
     background-position: center;
-    height: 90vh !important;
+    height: 600px !important;
 }
 .img-hero-sindicato{
     background-image: url("./img/Mastersoft-Sindicatos-hero.png");
     background-size: cover;
     background-position: center;
-    height: 90vh !important;
+    height: 600px !important;
 }
 .img-hero-ong{
     background-image: url("./img/Mastersoft-Ong-hero.png");
     background-size: cover;
     background-position: center;
-    height: 90vh !important;
+    height: 600px !important;
 }
 .img-hero-nuestraCultura{
     background-image: url("./img/Mastersoft-NuestraCultura_Hero.png");
     background-size: cover;
     background-position: center;
-    height: 90vh !important;
+    height: 600px !important;
 }
 .img-hero-rrhh{
     background-image: url("./img/MasterSoft_rrhh_hero.png");
     background-size: cover;
     background-position: center;
-    height: 90vh !important;
+    height: 600px !important;
 }
 .img-hero-firma{
     background-image: url("./img/MasterSoft_firma_hero.png");
     background-size: cover;
     background-position: center;
-    height: 90vh !important;
+    height: 600px !important;
 }
 
 .slick-dots {
@@ -629,7 +629,7 @@ nav button{
     color: var(--primary-color);
     
 } 
-.hero-section-max::after{
+/* .hero-section-max::after{
     content: '';
     position: absolute;
     bottom: -95px;
@@ -640,7 +640,7 @@ nav button{
     background-size: cover;
     background-position: center;
     z-index: 1;
-}
+} */
 .hero-opacity{
     background: #393A3BB2;
     width: 100%;
@@ -659,7 +659,7 @@ nav button{
     gap: 50px;
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 50px;
+    padding-top: 80px;
 }
 .info-hero p {
     color: var(--white-color);
@@ -675,7 +675,7 @@ nav button{
     gap: 50px;
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 50px;
+    padding-top: 80px;
 }
 .info-hero2 p {
     color: var(--white-color);
@@ -691,7 +691,7 @@ nav button{
     gap: 50px;
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 50px;
+    padding-top: 80px;
 }
 .info-hero-carrusel p {
     color: var(--white-color);
@@ -2475,8 +2475,11 @@ footer {
     nav ul.show-menu li {
         display: block;
         padding: 16px 0px;
-        font-size: 2rem;
+        font-size: 18px;
         border-bottom: 1px solid #fff;
+    }
+    nav ul.show-menu li:nth-of-type(4){
+        padding: 16px;
     }
     nav ul.show-menu li:last-child {
         border-bottom: none;
@@ -2527,7 +2530,7 @@ footer {
     /* section hero */
 .hero-section{
     padding-top: 140px;
-    height: auto;
+    height: 600px;
     display: flex;
 }
 .hero-section::after{
@@ -2535,16 +2538,16 @@ footer {
     height: 120px;
     background-image: url("./img/diagonal-rojo-mobile.png");
 }
-.hero-section-max::after{
+/* .hero-section-max::after{
     bottom: -50px;
     height: 120px;
     background-image: url("./img/diagonal-rojo-mobile.png");
-}
+} */
 .content-hero{
     grid-template-columns: 1fr;
     padding: 20px;   
 }
-.hero-section2{   
+/* .hero-section2{   
     height: 85vh;
 }
 .hero-section-max{   
@@ -2591,13 +2594,13 @@ footer {
 }
 .slide-track{
     height: 90vh !important;
-}
+} */
 .info-hero-carrusel{
     grid-template-columns: 1fr;
     padding-top: 70px;
     text-align: left;
     gap: 0px;
-    padding: 30px 20px ;
+    padding: 50px 20px ;
 }
 .info-hero-carrusel p {
     font-size: 18px;
@@ -2608,7 +2611,7 @@ footer {
     padding-top: 70px;
     text-align: left;
     gap: 0px;
-    padding: 30px 20px ;
+    padding: 50px 20px ;
 }
 .info-hero p {
     color: var(--white-color);
@@ -2621,7 +2624,7 @@ footer {
     padding-top: 70px;
     text-align: left;
     gap: 0px;
-    padding: 30px 20px ;
+    padding: 50px 20px ;
 }
 .info-hero2 p {
    color: var(--white-color);
@@ -2632,9 +2635,9 @@ footer {
 .slick-dots {
         left: 90px;
 }
-.slick-list {
+/* .slick-list {
     height: 85vh !important;
-}
+} */
 /* end section hero */
 /* section soluciones */
 .soluciones-section {
@@ -3131,11 +3134,11 @@ footer {
     height: 200px;
     background-image: url("./img/diagonal-rojo-mobile.png");
 }
-.hero-section-max::after{
+/* .hero-section-max::after{
     bottom: -50px;
     height: 200px;
     background-image: url("./img/diagonal-rojo-mobile.png");
-}
+} */
 .hero-section{   
     height: 55vh;
 }
