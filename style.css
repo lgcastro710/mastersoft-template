@@ -588,7 +588,7 @@ nav button{
     height: 600px !important;
 }
 
-.slick-dots {
+/* .slick-dots {
   position: absolute !important;
   bottom: 30px !important;
   left: 15%;
@@ -600,6 +600,15 @@ nav button{
   margin: 0;
   padding: 0;
   z-index: 10;
+} */
+.hero-section .slick-dots {
+  position: absolute !important;
+  bottom: 45px; 
+  left: 50% !important;
+  transform: translateX(-50%);
+  width: min(90%, 1200px); 
+  margin: 0 auto;
+  text-align: left; 
 }
 .slick-dotted.slick-slider{
     margin-bottom: 0 !important;
