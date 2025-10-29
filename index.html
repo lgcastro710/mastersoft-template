@@ -316,7 +316,7 @@
                             <input type="tel" name="telefono" placeholder="Teléfono" style="width: 40%;">
                         </label>
 
-                        <p>Productos de interés:</p>
+                        <!-- <p>Productos de interés:</p>
                         <div class="checkbox-group">
                             <div class="custom-checkbox">
                                 <input type="checkbox" id="checkbox1" name="productos_interes[]" value="Plataforma ERP">
@@ -338,10 +338,25 @@
                                 <input type="checkbox" id="checkbox5" name="productos_interes[]" value="Otros productos/servicios">
                                 <label for="checkbox5">Otros productos/servicios</label>
                             </div>
-                        </div>
+                        </div> -->
+                        <p>Productos de interés:</p>
+                          <div class="custom-select" data-name="producto-interes">
+                                <input type="hidden" name="producto-interes" value="">
+                                <div class="select-trigger">
+                                    <span class="selected-option">Selecciona una opción</span>
+                                    <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+                                </div>
+                                <ul class="select-options">
+                                    <li data-value="erp">Plataforma ERP</li>
+                                    <li data-value="salud">Solución para Salud</li>
+                                    <li data-value="rrhh">Sistema para RRHH</li>
+                                    <li data-value="firma">Solución de Firma Digital</li>
+                                    <li data-value="otros">Otros productos/servicios</li>
+                                </ul>
+                                </div>
 
                         <label>
-                            Deja tu comentario*
+                            <p>Deja tu comentario*</p>
                             <textarea name="comentario" required></textarea>
                         </label>
 
