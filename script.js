@@ -174,11 +174,12 @@ document.addEventListener("DOMContentLoaded", function() {
 }, 50);
 });
 
-document.querySelectorAll('.custom-select').forEach(select => {
+document.querySelectorAll('.custom-select.multiple').forEach(select => {
   const trigger = select.querySelector('.select-trigger');
   const options = select.querySelector('.select-options');
   const selectedText = select.querySelector('.selected-option');
   const hiddenInput = select.querySelector('input[type="hidden"]');
+  const selectedValues = new Set();
 
   // Abrir / cerrar
   trigger.addEventListener('click', () => {
@@ -188,16 +189,28 @@ document.querySelectorAll('.custom-select').forEach(select => {
     select.classList.toggle('open');
   });
 
-  // Seleccionar opción
+  // Seleccionar/deseleccionar opción
   options.querySelectorAll('li').forEach(option => {
-    option.addEventListener('click', () => {
+    option.addEventListener('click', e => {
       const value = option.getAttribute('data-value');
-      selectedText.textContent = option.textContent;
-      hiddenInput.value = value;
+      const text = option.textContent;
 
-      options.querySelectorAll('li').forEach(o => o.classList.remove('selected'));
-      option.classList.add('selected');
-      select.classList.remove('open');
+      if (selectedValues.has(value)) {
+        selectedValues.delete(value);
+        option.classList.remove('selected');
+      } else {
+        selectedValues.add(value);
+        option.classList.add('selected');
+      }
+
+      const selectedArray = Array.from(selectedValues);
+      hiddenInput.value = selectedArray.join(', ');
+      selectedText.textContent = selectedArray.length
+        ? selectedArray.join(', ')
+        : 'Selecciona una o más opciones';
+      selectedText.classList.toggle('multiple-text', selectedArray.length > 1);
+
+      e.stopPropagation();
     });
   });
 });
@@ -208,3 +221,4 @@ document.addEventListener('click', e => {
     document.querySelectorAll('.custom-select').forEach(s => s.classList.remove('open'));
   }
 });
+

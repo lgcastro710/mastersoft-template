@@ -1822,7 +1822,10 @@ nav button{
   background: var(--primary-color);
   color: white;
 }
-
+.selected-option.multiple-text {
+  white-space: pre-wrap;
+  line-height: 1.4;
+}
 .checkbox-group {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
