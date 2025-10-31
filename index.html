@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=keyboard_arrow_down" />
     <link rel="shortcut icon" href="./img/mastersoft.ico" type="image/x-icon">
-    
+
     <meta name="keywords" content="software de gestion, software gestion pymes, soluciones erp, software sector salud, software para obras sociales, software para médicos, software para Industrias, software quimica, software aduana, software sector de salud, software sector pyme, sistema de facturacion electronica, control contable, administración y gestión empresarial, organización de procesos internos" />
     <meta name="description" content="Especialistas en Software de Gestión para Pymes. Sistema de facturacion electronica, control contable, administración y gestión empresarial. Blog">
 
@@ -307,38 +307,40 @@
                             <input type="text" name="nombre" placeholder="Nombre y apellido*" required>
                         </label>
                         <label>                           
-                            <input type="email" name="email" placeholder="Email*" required>
+                            <input type="email" id="email" name="email" placeholder="Email*" required>
                         </label>
                         <label>                           
                             <input type="text" name="empresa" placeholder="Empresa*" required>
                         </label>
-                        <label>                            
-                            <input type="tel" name="telefono" placeholder="Teléfono" style="width: 40%;">
+                        <label>
+                        <p>Teléfono</p>
+                        <div class="phone-group">
+                            <div class="phone-code">
+                            <button type="button" id="code-toggle">+54</button>
+                            <ul id="code-list">
+                                <li data-code="+54">+54</li>
+                                <li data-code="+51">+51</li>
+                                <li data-code="+52">+52</li>
+                                <li data-code="+55">+55</li>
+                                <li data-code="+56">+56</li>
+                                <li data-code="+57">+57</li>
+                                <li data-code="+58">+58</li>
+                                <li data-code="+598">+598</li>
+                                <li data-code="+34">+34</li>
+                                <li data-code="+1">+1</li>
+                            </ul>
+                            </div>
+                            <input
+                            style="padding: 0;width: 100%;"
+                            type="tel"
+                            id="telefono"
+                            name="telefono"
+                            placeholder="Ej: 11 2345 6789"
+                            required
+                            />
+                        </div>
                         </label>
 
-                        <!-- <p>Productos de interés:</p>
-                        <div class="checkbox-group">
-                            <div class="custom-checkbox">
-                                <input type="checkbox" id="checkbox1" name="productos_interes[]" value="Plataforma ERP">
-                                <label for="checkbox1">Plataforma ERP</label>
-                            </div>
-                            <div class="custom-checkbox">
-                                <input type="checkbox" id="checkbox2" name="productos_interes[]" value="Solución para Salud">
-                                <label for="checkbox2">Solución para Salud</label>
-                            </div>
-                            <div class="custom-checkbox">
-                                <input type="checkbox" id="checkbox3" name="productos_interes[]" value="Sistema para RRHH">
-                                <label for="checkbox3">Sistema para RRHH</label>
-                            </div>
-                            <div class="custom-checkbox">
-                                <input type="checkbox" id="checkbox4" name="productos_interes[]" value="Firma Digital">
-                                <label for="checkbox4">Firma Digital</label>
-                            </div>
-                            <div class="custom-checkbox">
-                                <input type="checkbox" id="checkbox5" name="productos_interes[]" value="Otros productos/servicios">
-                                <label for="checkbox5">Otros productos/servicios</label>
-                            </div>
-                        </div> -->
                         <p>Productos de interés:</p>
                        <div class="custom-select multiple" data-name="producto-interes">
                         <input type="hidden" name="producto-interes" value="">
@@ -356,15 +358,15 @@
                         </div>
 
                         <label>
-                            <p>Deja tu comentario*</p>
-                            <textarea name="comentario" required></textarea>
+                            <p>Deja tu comentario</p>
+                            <textarea name="comentario"></textarea>
                         </label>
 
                         <button type="submit">Solicita tu diagnóstico gratuito</button>
                 </form>
 
                 <!-- Mensaje oculto -->
-                <div id="thank-you-message" style="display: none; color: green; font-weight: bold; margin-top: 20px;">
+                <div id="thank-you-message" style="display: none; color: #132238; font-family: 'Open Sans', sans-serif; font-weight: bold; margin-top: 20px;">
                 ¡Gracias! Tu mensaje fue enviado correctamente.
                 </div>
              </div>

@@ -222,3 +222,95 @@ document.addEventListener('click', e => {
   }
 });
 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contact-form");
+  const thankYou = document.getElementById("thank-you-message");
+  const emailInput = document.getElementById("email");
+  const telefonoInput = document.getElementById("telefono");
+  const codeToggle = document.getElementById("code-toggle");
+  const codeList = document.getElementById("code-list");
+
+  /* === VALIDACIÓN DE EMAIL === */
+  function validarEmail(email) {
+    // Expresión regular básica + dominio con punto
+    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$/;
+    return regex.test(email.trim());
+  }
+
+  /* === MÁSCARA PARA TELÉFONO === */
+  telefonoInput.addEventListener("input", () => {
+    // Solo números
+    telefonoInput.value = telefonoInput.value.replace(/[^\d]/g, "");
+  });
+
+  /* === SELECTOR DE CÓDIGO DE ÁREA === */
+  if (codeToggle && codeList) {
+    codeToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      codeList.classList.toggle("show");
+      const expanded = codeList.classList.contains("show");
+      codeToggle.setAttribute("aria-expanded", expanded ? "true" : "false");
+    });
+
+    codeList.addEventListener("click", (e) => {
+      const li = e.target.closest("li");
+      if (!li) return;
+      const code = li.getAttribute("data-code") || li.textContent.trim();
+      codeToggle.textContent = code;
+      codeList.classList.remove("show");
+      codeToggle.setAttribute("aria-expanded", "false");
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!codeToggle.contains(e.target) && !codeList.contains(e.target)) {
+        codeList.classList.remove("show");
+        codeToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") codeList.classList.remove("show");
+    });
+  }
+
+  /* === ENVÍO DEL FORMULARIO === */
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const email = emailInput.value;
+    const telefono = telefonoInput.value;
+    const codigo = codeToggle ? codeToggle.textContent.trim() : "";
+
+    // Validaciones antes del envío
+    if (!validarEmail(email)) {
+      alert("Por favor, ingresa un email válido (ej: usuario@dominio.com)");
+      return;
+    }
+
+    if (!telefono || telefono.length < 6) {
+      alert("Por favor, ingresa un número de teléfono válido.");
+      return;
+    }
+
+    const formData = new FormData(form);
+    formData.append("telefono", `${codigo} ${telefono}`);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+
+      if (response.ok) {
+        thankYou.style.display = "block";
+        form.reset();
+      } else {
+        alert("Ocurrió un error al enviar el formulario. Intenta nuevamente.");
+      }
+    } catch (error) {
+      alert("Error de conexión al enviar el formulario.");
+    }
+  });
+});

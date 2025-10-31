@@ -1713,7 +1713,7 @@ nav button{
       border: none;
       background: transparent;
       font-family: 'Open Sans', sans-serif;
-      font-size: 18px;
+      font-size: 16px;
       border-bottom: 1px solid #F1F1F1;
     }
     input:focus {
@@ -1728,7 +1728,7 @@ nav button{
     }
   }
 
-  p { margin: 10px 0 0; font-weight: 600; font-family: 'Open Sans', sans-serif; font-size: 12px; }
+  p { margin: 10px 0 0; font-weight: 600; font-family: 'Open Sans', sans-serif; font-size: 16px; }
 
   button {
     background: var(--primary-color);
@@ -1748,6 +1748,63 @@ nav button{
         background: #97212e;
     }
 }
+.phone-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.phone-code {
+  position: relative;
+}
+
+#code-toggle {
+  background: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-top: 0;
+  cursor: pointer;
+  font-size: 15px;
+  color: #333;
+}
+
+#code-toggle:hover {
+  border-color: #b80000;
+}
+
+#code-list {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  list-style: none;
+  padding: 4px 0;
+  margin: 0;
+  width: 90px;
+  max-height: 240px;
+  overflow-y: auto;
+  display: none;
+  z-index: 9999;
+}
+
+#code-list.show {
+  display: block;
+}
+
+#code-list li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+#code-list li:hover {
+  background: #b80000;
+  color: #fff;
+}
+
 .custom-select {
   position: relative;
   width: 100%;
