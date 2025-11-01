@@ -281,49 +281,66 @@
                             <input type="text" name="nombre" placeholder="Nombre y apellido*" required>
                         </label>
                         <label>                           
-                            <input type="email" name="email" placeholder="Email*" required>
+                            <input type="email" id="email" name="email" placeholder="Email*" required>
                         </label>
                         <label>                           
                             <input type="text" name="empresa" placeholder="Empresa*" required>
                         </label>
-                        <label>                            
-                            <input type="tel" name="telefono" placeholder="Teléfono" style="width: 40%;">
+                        <label>
+                        <p>Teléfono</p>
+                        <div class="phone-group">
+                            <div class="phone-code">
+                            <button type="button" id="code-toggle">+54</button>
+                            <ul id="code-list">
+                                <li data-code="+54">+54</li>
+                                <li data-code="+51">+51</li>
+                                <li data-code="+52">+52</li>
+                                <li data-code="+55">+55</li>
+                                <li data-code="+56">+56</li>
+                                <li data-code="+57">+57</li>
+                                <li data-code="+58">+58</li>
+                                <li data-code="+598">+598</li>
+                                <li data-code="+34">+34</li>
+                                <li data-code="+1">+1</li>
+                            </ul>
+                            </div>
+                            <input
+                            style="padding: 0;width: 100%;"
+                            type="tel"
+                            id="telefono"
+                            name="telefono"
+                            placeholder="Ej: 11 2345 6789"
+                            required
+                            />
+                        </div>
                         </label>
 
                         <p>Productos de interés:</p>
-                        <div class="checkbox-group">
-                            <div class="custom-checkbox">
-                                <input type="checkbox" id="checkbox1" name="productos_interes[]" value="Plataforma ERP">
-                                <label for="checkbox1">Plataforma ERP</label>
-                            </div>
-                            <div class="custom-checkbox">
-                                <input type="checkbox" id="checkbox2" name="productos_interes[]" value="Solución para Salud">
-                                <label for="checkbox2">Solución para Salud</label>
-                            </div>
-                            <div class="custom-checkbox">
-                                <input type="checkbox" id="checkbox3" name="productos_interes[]" value="Sistema para RRHH">
-                                <label for="checkbox3">Sistema para RRHH</label>
-                            </div>
-                            <div class="custom-checkbox">
-                                <input type="checkbox" id="checkbox4" name="productos_interes[]" value="Firma Digital">
-                                <label for="checkbox4">Firma Digital</label>
-                            </div>
-                            <div class="custom-checkbox">
-                                <input type="checkbox" id="checkbox5" name="productos_interes[]" value="Otros productos/servicios">
-                                <label for="checkbox5">Otros productos/servicios</label>
-                            </div>
+                       <div class="custom-select multiple" data-name="producto-interes">
+                        <input type="hidden" name="producto-interes" value="">
+                        <div class="select-trigger">
+                            <span class="selected-option">Selecciona una o más opciones</span>
+                            <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+                        </div>
+                        <ul class="select-options">
+                            <li data-value="Plataforma ERP">Plataforma ERP</li>
+                            <li data-value="Solución para Salud">Solución para Salud</li>
+                            <li data-value="Sistema para RRHH">Sistema para RRHH</li>
+                            <li data-value="Firma Digital">Firma Digital</li>
+                            <li data-value="otros">Otros productos/servicios</li>
+                        </ul>
                         </div>
 
                         <label>
-                            Deja tu comentario*
-                            <textarea name="comentario" required></textarea>
+                            <p>Deja tu comentario</p>
+                            <textarea name="comentario"></textarea>
                         </label>
 
                         <button type="submit">Solicita tu diagnóstico gratuito</button>
                 </form>
 
                 <!-- Mensaje oculto -->
-                <div id="thank-you-message" style="display: none; color: green; font-weight: bold; margin-top: 20px;">
+                <div id="thank-you-message" style="display: none; color: #132238; font-family: 'Open Sans', sans-serif; font-weight: bold; margin-top: 20px;">
                 ¡Gracias! Tu mensaje fue enviado correctamente.
                 </div>
              </div>

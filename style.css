@@ -1764,6 +1764,7 @@ nav button{
   border-radius: 6px;
   padding: 8px 12px;
   margin-top: 0;
+  border: 1px solid #cdcdcd;
   cursor: pointer;
   font-size: 15px;
   color: #333;
@@ -1829,7 +1830,7 @@ nav button{
   background: #fff4f4;
 }
 
-.arrow {
+.select-trigger .arrow {
   transition: transform 0.3s ease;
   color: var(--primary-color);
 }
@@ -2971,8 +2972,11 @@ footer {
     object-fit: cover;
     margin-bottom: 20px;
 }
+.respaldo-section .texto-respaldo{
+    padding: 50px 20px 0;
+}
 .texto-respaldo{
-    padding: 0 20px;
+    padding: 0;
 }
 .texto-respaldo p span{
     white-space: nowrap;
