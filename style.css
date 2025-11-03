@@ -273,7 +273,9 @@ nav ul li a {
     font-size: 18px;
     position: relative;
 }
-
+nav ul li:nth-of-type(4){
+        padding: 0 16px;
+    }
 nav button{
     background: none;
     border: none;
@@ -289,7 +291,7 @@ nav button{
     }
 
     .dropdown-toggle {
-      padding: 0px 16px;
+      padding: 10px 16px;
       font-size: 18px;
       border: none;
       cursor: pointer;
@@ -2625,6 +2627,7 @@ footer {
     }
     nav ul.show-menu li:nth-of-type(4){
         padding: 16px;
+        border-bottom: none;
     }
     nav ul.show-menu li:last-child {
         border-bottom: none;
