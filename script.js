@@ -221,27 +221,32 @@ document.addEventListener('click', e => {
     document.querySelectorAll('.custom-select').forEach(s => s.classList.remove('open'));
   }
 });
-
-
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contact-form");
   const thankYou = document.getElementById("thank-you-message");
   const emailInput = document.getElementById("email");
   const telefonoInput = document.getElementById("telefono");
   const codeToggle = document.getElementById("code-toggle");
   const codeList = document.getElementById("code-list");
+  const emailError = document.getElementById("email-error");
+  const telefonoError = document.getElementById("telefono-error");
 
-  /* === VALIDACIÓN DE EMAIL === */
+  /* === VALIDAR EMAIL === */
   function validarEmail(email) {
-    // Expresión regular básica + dominio con punto
-    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$/;
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email.trim());
   }
 
-  /* === MÁSCARA PARA TELÉFONO === */
+  /* === LIMPIAR ERRORES === */
+  emailInput.addEventListener("input", () => {
+    emailError.textContent = "";
+    emailInput.classList.remove("error");
+  });
+
   telefonoInput.addEventListener("input", () => {
-    // Solo números
     telefonoInput.value = telefonoInput.value.replace(/[^\d]/g, "");
+    telefonoError.textContent = "";
+    telefonoInput.classList.remove("error");
   });
 
   /* === SELECTOR DE CÓDIGO DE ÁREA === */
@@ -249,68 +254,90 @@ document.addEventListener("DOMContentLoaded", () => {
     codeToggle.addEventListener("click", (e) => {
       e.stopPropagation();
       codeList.classList.toggle("show");
-      const expanded = codeList.classList.contains("show");
-      codeToggle.setAttribute("aria-expanded", expanded ? "true" : "false");
     });
 
     codeList.addEventListener("click", (e) => {
       const li = e.target.closest("li");
       if (!li) return;
-      const code = li.getAttribute("data-code") || li.textContent.trim();
-      codeToggle.textContent = code;
+      codeToggle.textContent = li.dataset.code;
       codeList.classList.remove("show");
-      codeToggle.setAttribute("aria-expanded", "false");
     });
 
     document.addEventListener("click", (e) => {
       if (!codeToggle.contains(e.target) && !codeList.contains(e.target)) {
         codeList.classList.remove("show");
-        codeToggle.setAttribute("aria-expanded", "false");
       }
-    });
-
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") codeList.classList.remove("show");
     });
   }
 
-  /* === ENVÍO DEL FORMULARIO === */
-  form.addEventListener("submit", async function (e) {
-    e.preventDefault();
+  /* === BLOQUEO TOTAL DE ENVÍO NATIVO === */
+  form.addEventListener(
+    "submit",
+    async (e) => {
+      e.stopImmediatePropagation(); // 🚫 corta otros listeners (incluido Formspree)
+      e.preventDefault(); // 🚫 bloquea el envío por defecto
 
-    const email = emailInput.value;
-    const telefono = telefonoInput.value;
-    const codigo = codeToggle ? codeToggle.textContent.trim() : "";
+      console.log("Interceptado el envío del formulario");
 
-    // Validaciones antes del envío
-    if (!validarEmail(email)) {
-      alert("Por favor, ingresa un email válido (ej: usuario@dominio.com)");
-      return;
-    }
+      const email = emailInput.value.trim();
+      const telefono = telefonoInput.value.trim();
+      const codigo = codeToggle ? codeToggle.textContent.trim() : "";
 
-    if (!telefono || telefono.length < 6) {
-      alert("Por favor, ingresa un número de teléfono válido.");
-      return;
-    }
+      emailError.textContent = "";
+      telefonoError.textContent = "";
+      emailInput.classList.remove("error");
+      telefonoInput.classList.remove("error");
 
-    const formData = new FormData(form);
-    formData.append("telefono", `${codigo} ${telefono}`);
+      let valido = true;
 
-    try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: { Accept: "application/json" },
-      });
-
-      if (response.ok) {
-        thankYou.style.display = "block";
-        form.reset();
-      } else {
-        alert("Ocurrió un error al enviar el formulario. Intenta nuevamente.");
+      // Email
+      if (!validarEmail(email)) {
+        emailError.textContent = "Por favor, ingresa un email válido.";
+        emailInput.classList.add("error");
+        valido = false;
       }
-    } catch (error) {
-      alert("Error de conexión al enviar el formulario.");
-    }
-  });
+
+      // Teléfono
+      const telefonoLimpio = telefono.replace(/\D/g, "");
+      if (telefonoLimpio.length < 10 || telefonoLimpio.length > 15) {
+        telefonoError.textContent =
+          "El número debe tener entre 10 y 15 dígitos.";
+        telefonoInput.classList.add("error");
+        valido = false;
+      }
+
+      if (!valido) {
+        console.warn("❌ Formulario inválido, no se envía.");
+        return false; // frena todo
+      }
+
+      // ✅ Envío manual si todo es válido
+      const formData = new FormData(form);
+      formData.set("telefono", `${codigo} ${telefono}`);
+
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: { Accept: "application/json" },
+        });
+
+        if (response.ok) {
+          form.reset();
+          thankYou.style.display = "block";
+          setTimeout(() => (thankYou.style.display = "none"), 5000);
+        } else {
+          telefonoError.textContent =
+            "Ocurrió un error al enviar el formulario.";
+        }
+      } catch (error) {
+        telefonoError.textContent =
+          "Error de conexión. Intenta nuevamente.";
+      }
+
+      return false; // ⚠️ evita reenvío
+    },
+    true // <- captura en fase "capture", antes que Formspree
+  );
 });
+

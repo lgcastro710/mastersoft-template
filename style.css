@@ -1727,6 +1727,9 @@ nav button{
     border-color: var(--primary-color); /* o el color que uses normalmente */
     }
   }
+textarea {
+  resize: vertical;
+}
 
   p { margin: 10px 0 0; font-weight: 600; font-family: 'Open Sans', sans-serif; font-size: 16px; }
 
@@ -1969,6 +1972,12 @@ nav button{
     color: #555;
     font-style: italic;
   }
+  .error-msg {
+  color: #b80000;
+  font-size: 13px;
+  margin-top: 4px;
+  display: block;
+}
 /* end section formulario */
 /* syles footer */
 footer {
@@ -2816,8 +2825,8 @@ footer {
   transform: scale(1.08);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
-.card-solucion:hover {
-    display: none !important;
+.card-solucion:hover::after{
+    width: 0px;
 }
 .card-solucion br{
     display: none;
