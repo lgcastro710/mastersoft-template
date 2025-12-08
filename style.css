@@ -310,6 +310,9 @@ nav button{
       color: var(--primary-color);
       font-weight: bold;
     }
+    .arrow img{
+        max-width: 15px !important;
+    }
     .arrow {
       display: inline-block;
       transition: transform 0.3s ease;
