@@ -230,13 +230,13 @@ Una plataforma pensada para acompañar el crecimiento y la sostenibilidad de tu 
                         <small id="telefono-error" class="error-msg"></small>
                         </label>
 
-                        <p>Productos de interés:</p>
+                        <p>Productos de interés:*</p>
                        <div class="custom-select multiple" data-name="producto-interes">
-                        <input type="hidden" name="producto-interes" value="">
+                        <input type="text" name="producto-interes" tabindex="-1" class="select-required" required>
                         <div class="select-trigger">
                             <span class="selected-option">Selecciona una o más opciones</span>
                             <span class="arrow"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24">
-  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m19 9-7 7-7-7"/></svg></span>
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m19 9-7 7-7-7"/></svg></span>
                         </div>
                         <ul class="select-options">
                             <li data-value="Plataforma ERP">Plataforma ERP</li>
@@ -248,8 +248,9 @@ Una plataforma pensada para acompañar el crecimiento y la sostenibilidad de tu 
                         </div>
 
                         <label>
-                            <p>Deja tu comentario</p>
-                            <textarea name="comentario"></textarea>
+                            <p>Deja tu comentario*</p>
+                            <textarea  id="comentario" name="comentario" maxlength="1000" required></textarea>
+                            <small id="contador">0 / 1000</small>
                         </label>
 
                         <button type="submit">Solicita tu diagnóstico gratuito</button>

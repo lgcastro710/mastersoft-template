@@ -178,7 +178,7 @@ document.querySelectorAll('.custom-select.multiple').forEach(select => {
   const trigger = select.querySelector('.select-trigger');
   const options = select.querySelector('.select-options');
   const selectedText = select.querySelector('.selected-option');
-  const hiddenInput = select.querySelector('input[type="hidden"]');
+  const hiddenInput = select.querySelector('input[name="producto-interes"]');
   const selectedValues = new Set();
 
   // Abrir / cerrar
@@ -213,6 +213,12 @@ document.querySelectorAll('.custom-select.multiple').forEach(select => {
       e.stopPropagation();
     });
   });
+});
+const textarea = document.getElementById('comentario');
+const contador = document.getElementById('contador');
+
+textarea.addEventListener('input', () => {
+  contador.textContent = `${textarea.value.length} / 1000`;
 });
 
 // Cerrar si se hace clic fuera

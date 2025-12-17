@@ -2561,7 +2561,12 @@ footer {
   max-height: 500px; /* suficiente para que se vea el contenido */
   padding: 1rem;
 }
-
+.select-required {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+}
 /* ----- styles mobile ------ */
 @media (max-width: 930px) {
     /* utilities */

@@ -174,8 +174,9 @@
                         <small id="telefono-error" class="error-msg"></small>
                         </label>
                         <label>
-                            <p>Deja tu comentario</p>
-                            <textarea name="comentario"></textarea>
+                            <p>Deja tu comentario*</p>
+                            <textarea  id="comentario" name="comentario" maxlength="1000" required></textarea>
+                            <small id="contador">0 / 1000</small>
                         </label>
 
                         <button type="submit">Enviar formulario</button>
