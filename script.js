@@ -347,3 +347,52 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 });
 
+ async function loadCountries() {
+    try {
+      const res = await fetch("https://restcountries.com/v3.1/all?fields=name,idd,cca2");
+      const data = await res.json();
+
+      const countries = data
+        .filter(c => c.idd?.root && c.idd?.suffixes?.length)
+        .map(c => {
+          const code = c.idd.root + (c.idd.suffixes.length === 1 ? c.idd.suffixes[0] : "");
+          const flag = c.cca2.toUpperCase().split("").map(ch =>
+            String.fromCodePoint(0x1F1E6 - 65 + ch.charCodeAt(0))
+          ).join("");
+          return { name: c.name.common, code, flag };
+        })
+        .sort((a, b) => a.name.localeCompare(b.name));
+
+      const list = document.getElementById("code-list");
+
+      countries.forEach(({ flag, name, code }) => {
+        const li = document.createElement("li");
+        li.dataset.code = code;
+        li.textContent = `${flag} ${name} ${code}`;
+        li.addEventListener("click", () => {
+          document.getElementById("toggle-flag").textContent = flag;
+          document.getElementById("toggle-code").textContent = code;
+          list.style.display = "none";
+        });
+        list.appendChild(li);
+      });
+
+    } catch (e) {
+      console.error("Error cargando países:", e);
+    }
+  }
+
+  const toggle = document.getElementById("code-toggle");
+  const list = document.getElementById("code-list");
+
+  toggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const isOpen = list.style.display === "block";
+    list.style.display = isOpen ? "none" : "block";
+  });
+
+  document.addEventListener("click", () => {
+    list.style.display = "none";
+  });
+
+  loadCountries();

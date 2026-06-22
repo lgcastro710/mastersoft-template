@@ -304,79 +304,67 @@
                 <a href="https://www.youtube.com/@mastersoftargentina" target="_blank"><img src="./img/Youtube-red.svg" alt="Facebook"></a>
             </div>
             </div>
-            <div class="formulario">
-                <form id="contact-form" action="https://formspree.io/f/myznyndd" method="POST" class="form">
-                        <label>                            
-                            <input type="text" name="nombre" placeholder="Nombre y apellido*" required>
-                        </label>
-                        <label>                           
-                            <input type="text" id="email" name="email" placeholder="Email*" required>
-                            <small id="email-error" class="error-msg"></small>
-                        </label>
-                        <label>                           
-                            <input type="text" name="empresa" placeholder="Empresa*" required>
-                        </label>
-                        <label>
-                        <p>Teléfono</p>
-                        <div class="phone-group">
-                            <div class="phone-code">
-                            <button type="button" id="code-toggle">+54</button>
-                            <ul id="code-list">
-                                <li data-code="+54">+54</li>
-                                <li data-code="+51">+51</li>
-                                <li data-code="+52">+52</li>
-                                <li data-code="+55">+55</li>
-                                <li data-code="+56">+56</li>
-                                <li data-code="+57">+57</li>
-                                <li data-code="+58">+58</li>
-                                <li data-code="+598">+598</li>
-                                <li data-code="+34">+34</li>
-                                <li data-code="+1">+1</li>
-                            </ul>
-                            </div>
-                            <input
-                            style="padding: 0;width: 100%;"
-                            type="tel"
-                            id="telefono"
-                            name="telefono"
-                            placeholder="Ej: 11 2345 6789"
-                            required
-                            />
-                        </div>
-                        <small id="telefono-error" class="error-msg"></small>
-                        </label>
+           <div class="formulario">
+  <form id="contact-form" action="https://formspree.io/f/myznyndd" method="POST" class="form">
+    <label>
+      <input type="text" name="nombre" placeholder="Nombre y apellido*" required>
+    </label>
+    <label>
+      <input type="text" id="email" name="email" placeholder="Email*" required>
+      <small id="email-error" class="error-msg"></small>
+    </label>
+    <label>
+      <input type="text" name="empresa" placeholder="Empresa*" required>
+    </label>
+    <label>
+      <p>Teléfono</p>
+      <div class="phone-group">
+        <div class="phone-code">
+          <button type="button" id="code-toggle">
+            <span id="toggle-flag">🇦🇷</span>
+            <span id="toggle-code">+54</span>
+          </button>
+          <ul id="code-list"></ul>
+        </div>
+        <input type="tel" id="telefono" name="telefono" placeholder="Ej: 11 2345 6789" required />
+      </div>
+      <small id="telefono-error" class="error-msg"></small>
+    </label>
 
-                        <p>Productos de interés:*</p>
-                       <div class="custom-select multiple" data-name="producto-interes">
-                        <input type="text" name="producto-interes" tabindex="-1" class="select-required" required>
-                        <div class="select-trigger">
-                            <span class="selected-option">Selecciona una o más opciones</span>
-                            <span class="arrow"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m19 9-7 7-7-7"/></svg></span>
-                        </div>
-                        <ul class="select-options">
-                            <li data-value="Plataforma ERP">Plataforma ERP</li>
-                            <li data-value="Solución para Salud">Solución para Salud</li>
-                            <li data-value="Sistema para RRHH">Sistema para RRHH</li>
-                            <li data-value="Firma Digital">Firma Digital</li>
-                            <li data-value="otros">Otros productos/servicios</li>
-                        </ul>
-                        </div>
+    <p>Productos de interés:*</p>
+    <div class="custom-select multiple" data-name="producto-interes">
+      <input type="text" name="producto-interes" tabindex="-1" class="select-required" required>
+      <div class="select-trigger">
+        <span class="selected-option">Selecciona una o más opciones</span>
+        <span class="arrow">
+          <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m19 9-7 7-7-7"/>
+          </svg>
+        </span>
+      </div>
+      <ul class="select-options">
+        <li data-value="Plataforma ERP">Plataforma ERP</li>
+        <li data-value="Solución para Salud">Solución para Salud</li>
+        <li data-value="Sistema para RRHH">Sistema para RRHH</li>
+        <li data-value="Firma Digital">Firma Digital</li>
+        <li data-value="otros">Otros productos/servicios</li>
+      </ul>
+    </div>
 
-                        <label>
-                            <p>Deja tu comentario*</p>
-                            <textarea  id="comentario" name="comentario" maxlength="1000" required></textarea>
-                            <small id="contador">0 / 1000</small>
-                        </label>
+    <label>
+      <p>Deja tu comentario*</p>
+      <textarea id="comentario" name="comentario" maxlength="1000" required></textarea>
+      <small id="contador">0 / 1000</small>
+    </label>
 
-                        <button type="submit">Solicita tu diagnóstico gratuito</button>
-                </form>
+    <button type="submit">Solicita tu diagnóstico gratuito</button>
+  </form>
 
-                <!-- Mensaje oculto -->
-                <div id="thank-you-message" style="display: none; color: #132238; font-family: 'Open Sans', sans-serif; font-weight: bold; margin-top: 20px;">
-                ¡Gracias! Tu mensaje fue enviado correctamente.
-                </div>
-             </div>
+  <!-- Mensaje oculto -->
+  <div id="thank-you-message" style="display: none; color: #132238; font-family: 'Open Sans', sans-serif; font-weight: bold; margin-top: 20px;">
+    ¡Gracias! Tu mensaje fue enviado correctamente.
+  </div>
+</div>
         </div>
 
     </section>
