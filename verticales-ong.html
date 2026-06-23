@@ -25,52 +25,63 @@
             <nav>
                 <a href="index"><img src="./img/logo-mastersoft.png" alt="Logo MasterSoft" /></a>
                 <ul class="topnav" id="myTopnav">
-                    <li> 
-                        <div class="dropdown" data-id="1">
-                        <button class="dropdown-toggle">
-                        Productos
-                        <span class="arrow" id="arrow"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24">
-  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m19 9-7 7-7-7"/></svg></span>
-                        </button>
-                            <div class="dropdown-menu" id="dropdownMenu">
-                                <a href="productos-numbit" class="line-dropdown">ERP</a>
-                                <a href="productos-rrhh" class="line-dropdown">RRHH</a>
-                                <a href="productos-sysmed" class="line-dropdown">HIS - Gestión Salud</a>
-                                <a href="productos-firmaElectronica">Firma Electrónica</a>
-                            </div>
+        <li> 
+            <div class="dropdown" data-id="1">
+                <button class="dropdown-toggle">
+                    Productos
+                    <span class="arrow"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m19 9-7 7-7-7"/></svg></span>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="productos-numbit" class="line-dropdown">ERP</a>
+                    <a href="productos-rrhh" class="line-dropdown">RRHH</a>
+
+                    <!-- HIS con submenu -->
+                    <div class="has-submenu">
+                        <a href="productos-sysmed" class="line-dropdown items-submenu" id="toggleSubmenu">
+                            HIS - Gestión Salud
+                        </a>
+                        <div class="submenu">
+                            <a href="productos-sysmed-financiadores">Financiadores</a>
+                            <a href="productos-sysmed-prestadores">Prestadores</a>
                         </div>
-                    </li>
-                     <li> 
-                        <div class="dropdown" data-id="2">
-                        <button class="dropdown-toggle">
-                        Verticales
-                        <span class="arrow" id="arrow"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24">
-  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m19 9-7 7-7-7"/></svg></span>
-                        </button>
-                            <div class="dropdown-menu" id="dropdownMenu">
-                                <a href="verticales-salud" class="line-dropdown">Instituciones de Salud</a>
-                                <a href="verticales-sindicato" class="line-dropdown">Sindicatos</a>
-                                <a href="verticales-ong" class="line-dropdown">Asociaciones profesionales y ONGs</a>
-                                <a href="verticales-distribuidora">Distribuidoras</a>
-                            </div>
-                        </div>
-                    </li>
-                     <li> 
-                        <div class="dropdown" data-id="3">
-                        <button class="dropdown-toggle">
-                        Comunidad
-                        <span class="arrow" id="arrow"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24">
-  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m19 9-7 7-7-7"/></svg></span>
-                        </button>
-                            <div class="dropdown-menu" id="dropdownMenu">
-                            <a href="oportunidades-redPartners" class="line-dropdown">Red de Partners</a>
-                            <a href="nuestra-cultura">Nuestra Cultura</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li><a href="politica-calidad">Calidad</a></li>
-                    <li class="version-mobile"><a href="#formulario" class="ancla cta-contactos">Contáctanos</a></li>
-                </ul>
+                    </div>
+
+                    <a href="productos-firmaElectronica">Firma Electrónica</a>
+                </div>
+            </div>
+        </li>
+        <li> 
+            <div class="dropdown" data-id="2">
+                <button class="dropdown-toggle">
+                    Verticales
+                    <span class="arrow"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m19 9-7 7-7-7"/></svg></span>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="verticales-salud" class="line-dropdown">Instituciones de Salud</a>
+                    <a href="verticales-sindicato" class="line-dropdown">Sindicatos</a>
+                    <a href="verticales-ong" class="line-dropdown">Asociaciones profesionales y ONGs</a>
+                    <a href="verticales-distribuidora">Distribuidoras</a>
+                </div>
+            </div>
+        </li>
+        <li> 
+            <div class="dropdown" data-id="3">
+                <button class="dropdown-toggle" style="white-space: nowrap;">
+                    Trabajá con nosotros
+                    <span class="arrow"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m19 9-7 7-7-7"/></svg></span>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="nuestra-cultura">Sumate al equipo</a>
+                    <a href="oportunidades-redPartners" class="line-dropdown">Red de Partners</a>
+                </div>
+            </div>
+        </li>
+        <li><a href="politica-calidad">Calidad</a></li>
+        <li class="version-mobile"><a href="#formulario" class="ancla cta-contactos">Contáctanos</a></li>
+    </ul>
                 <div class="align-cta version-desktop"><a href="#formulario" class="ancla cta-contactos">Contáctanos</a></div>
                 <div class="menu-next">
                 <div class="container-menu" onclick="menuToggle(this)" id="icon-menuToggle">
@@ -280,31 +291,16 @@
                         </label>
                         <label>
                         <p>Teléfono</p>
-                        <div class="phone-group">
+                       <div class="phone-group">
                             <div class="phone-code">
-                            <button type="button" id="code-toggle">+54</button>
-                            <ul id="code-list">
-                                <li data-code="+54">+54</li>
-                                <li data-code="+51">+51</li>
-                                <li data-code="+52">+52</li>
-                                <li data-code="+55">+55</li>
-                                <li data-code="+56">+56</li>
-                                <li data-code="+57">+57</li>
-                                <li data-code="+58">+58</li>
-                                <li data-code="+598">+598</li>
-                                <li data-code="+34">+34</li>
-                                <li data-code="+1">+1</li>
-                            </ul>
+                            <button type="button" id="code-toggle">
+                                <span id="toggle-flag">🇦🇷</span>
+                                <span id="toggle-code">+54</span>
+                            </button>
+                            <ul id="code-list"></ul>
                             </div>
-                            <input
-                            style="padding: 0;width: 100%;"
-                            type="tel"
-                            id="telefono"
-                            name="telefono"
-                            placeholder="Ej: 11 2345 6789"
-                            required
-                            />
-                        </div>
+                            <input type="tel" id="telefono" name="telefono" placeholder="Ej: 11 2345 6789" required />
+                    </div>
                         <small id="telefono-error" class="error-msg"></small>
                         </label>
 
