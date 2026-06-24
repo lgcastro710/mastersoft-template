@@ -393,17 +393,24 @@ nav button{
         align-items: center;
         justify-content: space-between;
     }
-   
+   .submenu{
+    background: #f1f1f1;
+   }
 .submenu a {
     display: block;
     padding: 10px 16px;
     color: inherit;
     text-decoration: none;
     font-size: 18px;
-    padding-left: 30px;
+    padding-left: 40px;
     color: var(--text-color);
 }
-
+.submenu a:nth-of-type(1){
+    border-bottom: 1px solid #E5E5E5;
+} 
+.arrow-his{
+    margin-left: 30px;
+}
 .align-cta{
     display: flex;
     justify-content: flex-end;
@@ -2668,7 +2675,7 @@ footer {
         border-bottom: 1px solid #fff;
     }
     nav ul.show-menu li:nth-of-type(4){
-        padding: 16px;
+        margin-left: 0;
         border-bottom: none;
     }
     nav ul.show-menu li:last-child {
