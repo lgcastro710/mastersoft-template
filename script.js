@@ -349,37 +349,54 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+let allCountries = [];
+
   async function loadCountries() {
     try {
       const res = await fetch("countries.json");
-      const countries = await res.json();
-
-      const list = document.getElementById("code-list");
-      countries.forEach(({ flag, code }) => {
-        const li = document.createElement("li");
-        li.dataset.code = code;
-        li.textContent = `${flag} ${code}`;
-        li.addEventListener("click", () => {
-          document.getElementById("toggle-flag").textContent = flag;
-          document.getElementById("toggle-code").textContent = code;
-          list.style.display = "none";
-        });
-        list.appendChild(li);
-      });
-
+      allCountries = await res.json();
+      renderList(allCountries);
     } catch (e) {
       console.error("Error cargando países:", e);
     }
   }
 
+  function renderList(countries) {
+    const list = document.getElementById("code-list");
+    list.innerHTML = "";
+    countries.forEach(({ flag, code }) => {
+      const li = document.createElement("li");
+      li.dataset.code = code;
+      li.textContent = `${flag} ${code}`;
+      li.addEventListener("click", (e) => {
+        e.stopPropagation();
+        document.getElementById("code-toggle").value = code;
+        list.style.display = "none";
+      });
+      list.appendChild(li);
+    });
+  }
+
   const toggle = document.getElementById("code-toggle");
   const list = document.getElementById("code-list");
 
+  // Abrir al hacer click
   toggle.addEventListener("click", (e) => {
     e.stopPropagation();
-    list.style.display = list.style.display === "block" ? "none" : "block";
+    list.style.display = "block";
   });
 
+  // Filtrar mientras escribe
+  toggle.addEventListener("input", () => {
+    const q = toggle.value.toLowerCase();
+    const filtered = allCountries.filter(({ flag, code }) =>
+      name.toLowerCase().includes(q) || code.includes(q)
+    );
+    renderList(filtered);
+    list.style.display = "block";
+  });
+
+  // Cerrar al hacer click fuera
   document.addEventListener("click", () => list.style.display = "none");
 
   loadCountries();
