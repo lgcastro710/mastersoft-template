@@ -348,8 +348,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
-let allCountries = [];
+ let allCountries = [];
 
   async function loadCountries() {
     try {
@@ -368,7 +367,8 @@ let allCountries = [];
       const li = document.createElement("li");
       li.dataset.code = code;
       li.textContent = `${flag} ${code}`;
-      li.addEventListener("click", (e) => {
+      li.addEventListener("mousedown", (e) => {
+        e.preventDefault();
         e.stopPropagation();
         document.getElementById("code-toggle").value = code;
         list.style.display = "none";
@@ -380,13 +380,11 @@ let allCountries = [];
   const toggle = document.getElementById("code-toggle");
   const list = document.getElementById("code-list");
 
-  // Abrir al hacer click
   toggle.addEventListener("click", (e) => {
     e.stopPropagation();
     list.style.display = "block";
   });
 
-  // Filtrar mientras escribe
   toggle.addEventListener("input", () => {
     const q = toggle.value.toLowerCase();
     const filtered = allCountries.filter(({ flag, code }) =>
@@ -396,7 +394,10 @@ let allCountries = [];
     list.style.display = "block";
   });
 
-  // Cerrar al hacer click fuera
-  document.addEventListener("click", () => list.style.display = "none");
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".phone-code") && !e.target.closest("#code-list")) {
+      list.style.display = "none";
+    }
+  });
 
   loadCountries();
