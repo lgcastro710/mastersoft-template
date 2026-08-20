@@ -401,3 +401,36 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   loadCountries();
+
+  
+  function toggleAccordion(id) {
+            // Cerrar todos los acordeones
+            var accordions = document.querySelectorAll('.accordion');
+            accordions.forEach(function(accordion) {
+                var content = accordion.querySelector('.accordion-content');
+                var arrow = accordion.querySelector('.chevron-expander');
+                var border = accordion.querySelector('.border-header');
+                if (accordion.id !== id) {
+                    content.classList.remove('open');
+                    arrow.classList.remove('down');
+                    border.classList.remove('border-add');
+                }
+            });
+
+            // Alternar el acordeón actual
+            var currentAccordion = document.getElementById(id);
+            var currentContent = currentAccordion.querySelector('.accordion-content');
+            var currentArrow = currentAccordion.querySelector('.chevron-expander');
+            var currentBorder = currentAccordion.querySelector('.border-header');
+            if (currentContent.classList.contains('open')) {
+                currentContent.classList.remove('open');
+                currentArrow.classList.remove('down');
+                currentBorder.classList.remove('border-add');
+            } else {
+                currentContent.classList.add('open');
+                currentArrow.classList.add('down');
+                currentBorder.classList.add('border-add');
+            }
+        }
+
+      

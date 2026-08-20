@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasterSoft</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./slick-slider/slick-theme.css" />
+    <link rel="stylesheet" href="./slick-slider/slick.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=keyboard_arrow_down" />
+    <link rel="shortcut icon" href="./img/mastersoft.ico" type="image/x-icon">
+        
+    <meta name="keywords" content="software de gestion, software gestion pymes, soluciones erp, software sector salud, software para obras sociales, software para médicos, software para Industrias, software quimica, software aduana, software sector de salud, software sector pyme, sistema de facturacion electronica, control contable, administración y gestión empresarial, organización de procesos internos" />
+    <meta name="description" content="Especialistas en Software de Gestión para Pymes. Sistema de facturacion electronica, control contable, administración y gestión empresarial. Blog">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="https://www.mastersoft.com.ar/" />
+    <meta name="twitter:creator" content="@ERPMastersoft" />
+</head>
+<body>
+            <header>
+            <nav>
+                <a href="index"><img src="./img/logo-mastersoft.png" alt="Logo MasterSoft" /></a>
+                <ul class="topnav" id="myTopnav">
+        <li> 
+            <div class="dropdown" data-id="1">
+                <button class="dropdown-toggle">
+                    Productos
+                    <span class="arrow"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m19 9-7 7-7-7"/></svg></span>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="productos-numbit" class="line-dropdown">ERP</a>
+                    <a href="productos-rrhh" class="line-dropdown">RRHH</a>
+
+                    <!-- HIS con submenu -->
+                    <div class="has-submenu">
+                        <a href="productos-sysmed" class="line-dropdown items-submenu" id="toggleSubmenu">
+                            HIS - Gestión Salud
+                        </a>
+                        <div class="submenu">
+                           <a href="productos-sysmedFinanciadores">Financiadores<span class="arrow-his">›</span></a>
+                            <a href="productos-sysmedPrestadores">Prestadores<span class="arrow-his">›</span></a>
+                        </div>
+                    </div>
+
+                    <a href="productos-firmaElectronica" class="line-dropdown">Firma Electrónica</a>
+                    <a href="productos-miau">Soluciones de IA</a>
+                </div>
+            </div>
+        </li>
+        <li> 
+            <div class="dropdown" data-id="2">
+                <button class="dropdown-toggle">
+                    Verticales
+                    <span class="arrow"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m19 9-7 7-7-7"/></svg></span>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="verticales-salud" class="line-dropdown">Instituciones de Salud</a>
+                    <a href="verticales-sindicato" class="line-dropdown">Sindicatos</a>
+                    <a href="verticales-ong" class="line-dropdown">Asociaciones profesionales y ONGs</a>
+                    <a href="verticales-distribuidora">Distribuidoras</a>
+                </div>
+            </div>
+        </li>
+        <li> 
+            <div class="dropdown" data-id="3">
+                <button class="dropdown-toggle" style="white-space: nowrap;">
+                    Trabajá con nosotros
+                    <span class="arrow"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m19 9-7 7-7-7"/></svg></span>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="nuestra-cultura" class="line-dropdown">Sumate al equipo</a>
+                    <a href="oportunidades-redPartners">Red de Partners</a>
+                </div>
+            </div>
+        </li>
+        <li> 
+            <div class="dropdown" data-id="4">
+                <button class="dropdown-toggle" style="white-space: nowrap;">
+                    Quienes somos
+                    <span class="arrow"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m19 9-7 7-7-7"/></svg></span>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="acerca-nosotros" class="line-dropdown">Acerca de Mastersoft</a>
+                    <a href="politica-calidad">Calidad</a>
+                </div>
+            </div>
+        </li>
+        <li class="version-mobile"><a href="#formulario" class="ancla cta-contactos">Contáctanos</a></li>
+    </ul>
+                <div class="align-cta version-desktop"><a href="#formulario" class="ancla cta-contactos">Contáctanos</a></div>
+                <div class="menu-next">
+                <div class="container-menu" onclick="menuToggle(this)" id="icon-menuToggle">
+                  <div class="bar1"></div>
+                  <div class="bar2"></div>
+                  <div class="bar3"></div>
+                </div>
+                </div>
+            </nav>
+          </header>
+    <section class="hero-section-max">
+      <div class="img-hero-nosotros" style="padding-bottom: 40px;">
+                <div class="info-hero">
+                    <div>
+                        <h1 class="title1"><span>Más de 30 años desarrollando soluciones de gestión</span> que evolucionan con tu empresa</h1>
+                        <p>En Mastersoft ayudamos a organizaciones en toda la región a escalar su gestión desde una mirada integral de la operación, incorporando tecnología en constante evolución y construyendo relaciones de largo plazo con foco en la calidad.</p>
+                        <button class="cta-primary"><a href="#formulario" class="ancla">Hablemos</a></button>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+        </section>
+    <section class="gestion-section">
+         <div class="contenedor-width">
+            <div class="content-video pt-50">
+                <h2 class="subtitle">Conoce cómo trabajamos</h2>
+                <p class="parragram2">Una mirada a nuestro equipo y al día a día en el que desarrollamos tecnología para acompañar la evolución de la gestión en las empresas.</p>
+                <div class="box-video">
+                    <div style="position: relative; padding-top: 56.25%; /* 16:9 */">
+                        <iframe
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                        src="https://www.youtube.com/embed/qpkiPSGmiXA"
+                        title="Video MasterSoft"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </section>
+    <section class="history">
+        <div class="history__header">
+            <h2 class="subtitle">Nuestra historia, nuestros hitos</h2>
+            <p class="parragram2">Desde 1993, construimos un recorrido enfocado en desarrollar soluciones
+            de gestión innovadoras que acompañan la <br> evolución del mercado y las
+            necesidades de nuestros clientes.</p>
+        </div>
+        <div class="history-timeline-top">
+            <article class="history-item buller-top">
+                <div class="history-card bottom-border">
+                    <h3>Fundación y primeros desarrollos</h3>
+                    <ul>
+                    <li>Fundación de MasterSoft y primeros desarrollos de gestión y sueldos.</li>
+                    <li>Apertura de las primeras oficinas en Buenos Aires.</li>
+                    <li>Primeras implementaciones en Obras Sociales y clientes del sector Salud.</li>
+                    </ul>
+                </div>
+                <div class="history-year year--top">1993–1997</div>
+            </article>
+            <article class="history-item buller-top">
+                <div class="history-card bottom-border">
+                    <h3>Institucionalización y profesionalización</h3>
+                    <ul>
+                    <li>Participación fundacional en el Polo IT.</li>
+                    <li>Profesionalización, sede propia y fortalecimiento de infraestructura.</li>
+                    <li>Certificación ISO 9001 + Microsoft Gold Partner.</li>
+                    </ul>
+                </div>
+                <div class="history-year year--top">2003–2007</div>
+            </article>
+            <article class="history-item buller-top">
+                <div class="history-card bottom-border">
+                    <h3>Consolidación y nuevas plataformas</h3>
+                    <ul>
+                    <li>20 años de historia, 8 países y más de 40 colaboradores.</li>
+                    <li>Lanzamiento de SysMed Web.</li>
+                    <li>Consolidación organizacional y mejora continua de soluciones.</li>
+                    </ul>
+                </div>
+                <div class="history-year year--top">2013–2017</div>
+            </article>
+            <article class="history-item buller-top">
+                <div class="history-card bottom-border">
+                    <h3>Plataforma unificada e inteligencia artificial</h3>
+                    <ul>
+                    <li>Lanzamiento de FirmaloYa, Numbit ERP y MasterSoft One.</li>
+                    <li>Desarrollo de MediSalud AI, MIAU y nuevas soluciones basadas en IA.</li>
+                    <li>Integración de la IA al ecosistema de productos MasterSoft.</li>
+                    </ul>
+                </div>
+                <div class="history-year year--top">2023–2026</div>
+            </article>
+            <div></div>
+        </div>
+        <div class="timeline">
+            <div></div>
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" class="timeline-arrows" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m19 9-7 7-7-7"/></svg>
+        </div>
+        <div class="history-timeline-bottom">
+            <div></div>
+             <article class="history-item buller-bottom">
+                <div class="history-card top-border">
+                    <h3>Evolución tecnológica y foco en salud</h3>
+                    <ul>
+                    <li>Lanzamiento de SysMed e integración con ERP.</li>
+                    <li>Crecimiento sostenido en soluciones para el sector Salud.</li>
+                    <li>Migración a Windows y adopción de nuevas tecnologías.</li>
+                    </ul>
+                </div>
+                <div class="history-year year--bottom">1998–2002</div>
+            </article>
+            <article class="history-item buller-bottom">
+                <div class="history-card top-border">
+                    <h3>Escala, partners e innovación</h3>
+                    <ul>
+                    <li>Crecimiento regional en 5 países y más de 10.000 usuarios.</li>
+                    <li>Lanzamiento de SPERTA ERP y ampliación del ecosistema de soluciones.</li>
+                    <li>Incorporación de partners e inversión sostenida en I+D.</li>
+                    </ul>
+                </div>
+                <div class="history-year year--bottom">2008–2012</div>
+            </article>
+            <article class="history-item buller-bottom">
+                <div class="history-card top-border">
+                    <h3>Transformación digital y cloud</h3>
+                    <ul>
+                    <li>Evolución hacia aplicaciones móviles integradas y soluciones Cloud.</li>
+                    <li>Lanzamiento de Numbit People y nuevas soluciones colaborativas.</li>
+                    <li>Innovación para Salud en un contexto de transformación digital.</li>
+                    </ul>
+                </div>
+                <div class="history-year  year--bottom">2018–2022</div>
+            </article>            
+            <article class="history-item buller-bottom history-item--future">
+                <div class="history-card top-border">
+                    <h3>Visión 2030 <br>Hacia organizaciones inteligentes</h3>
+                    <ul>
+                    <li style="color: var(--white-color);">Transformar la experiencia de gestión mediante Inteligencia Artificial.</li>
+                    <li style="color: var(--white-color);">Evolucionar hacia una gestión operativa asistida por IA.</li>
+                    <li style="color: var(--white-color);">Incorporar agentes especializados e integrados al ecosistema de soluciones.</li>
+                    </ul>
+                </div>
+                <div class="history-year  year--bottom">2030</div>
+            </article>
+        </div>
+    </section>
+    <section class="integraciones-section" style="padding: 0 20px 100px;">
+            <div class="content-integraciones pt-50">
+                <div class="texto-integraciones">
+                <div class="pastilla-red">Nuestros diferenciales</div>
+                <h2 class="subtitle2">Mucho más que soluciones: una forma de acompañar la gestión</h2>
+                <p>En Mastersoft desarrollamos soluciones de gestión con una lógica clara: entender en profundidad cada operación para acompañar su evolución con solidez y mirada estratégica. Estos son algunos de los principios que guían nuestro trabajo.</p>
+            </div>
+            <div class="grid-integraciones">
+                <div class="items-integraciones">
+                    <img src="./img/icon-circle/Icon-46.png" alt="">
+                    <h3>Relacionesa largo plazo</h3>
+                    <p>Clientes que nos eligen hace más de 25 años reflejan un trabajo basado en confianza, cercanía y continuidad en el tiempo.</p>
+                </div>
+                <div class="items-integraciones">
+                    <img src="./img/icon-circle/Icon-47.png" alt="">
+                    <h3>Adaptacióncontinua continua</h3>
+                    <p>Nuestras soluciones evolucionan junto a cada cliente, adaptándose a nuevos desafíos, procesos y contextos de negocio.</p>
+                </div>
+                <div class="items-integraciones">
+                    <img src="./img/icon-circle/Icon-18.png" alt="">
+                    <h3>Presencia internacional</h3>
+                    <p>Acompañamos organizaciones en Argentina, Uruguay, Paraguay, Chile, México, Perú, Colombia y España.</p>
+                </div>
+                <div class="items-integraciones">
+                    <img src="./img/icon-circle/Icon-48.png" alt="">
+                    <h3>Visión integral de la gestión</h3>
+                    <p>Integramos tecnología, administración y operación para desarrollar soluciones que responden a la gestión real de cada empresa.</p>
+                </div>
+                <div class="items-integraciones">
+                    <img src="./img/icon-circle/Icon-49.png" alt="">
+                    <h3>Compromiso con la calidad</h3>
+                    <p>Trabajamos bajo estándares que aseguran consistencia, trazabilidad y mejora continua en cada implementación.</p>
+                </div>
+            </div>
+            <div class="cta-integraciones">
+                <a href="#formulario" class="ancla"><button>Hagamos equipo</button></a>
+            </div>
+            </div>
+        </section>
+   <section class="orgullo-section">
+        <div class="content-orgullo">
+            <div class="skew-bb"></div>
+            <div class="texto-orgullo">
+                <h2 class="title3">Nuestro mayor orgullo: <br> ser socio estratégico de <span>nuestros clientes</span></h2>
+                <p>Más de 300 empresas en LATAM, EE.UU. y Europa usan nuestras soluciones para gestionar <br> sus operaciones diarias de forma ágil, sencilla y segura. </p>
+            </div>
+            <div class="skew-b"></div>
+            <div class="logos-clientes">
+                 <div class="slider-home">
+                    <div class="slide-logosSysmed">
+                        <img src="./img/LOGOS-CLIENTES/grupo-alemana.png" alt="Cliente 1">
+                        <img src="./img/LOGOS-CLIENTES/Apsot.png" alt="Cliente 2">
+                        <img src="./img/LOGOS-CLIENTES/MEDIFE.png" alt="Cliente 7">
+                        <img src="./img/LOGOS-CLIENTES/APS.png" alt="Cliente 8">
+                        <img src="./img/LOGOS-CLIENTES/SANCORSalud.svg" alt="Cliente 10">
+                        <img src="./img/LOGOS-CLIENTES/CALZETTA.png" alt="Cliente 12" style="max-width: 90px;">
+                        <img src="./img/LOGOS-CLIENTES/Ypf.png" alt="Cliente 13">
+                        <!-- blucle infinito logos -->
+                        <img src="./img/LOGOS-CLIENTES/grupo-alemana.png" alt="Cliente 1">
+                        <img src="./img/LOGOS-CLIENTES/Apsot.png" alt="Cliente 2">
+                        <img src="./img/LOGOS-CLIENTES/MEDIFE.png" alt="Cliente 7">
+                        <img src="./img/LOGOS-CLIENTES/APS.png" alt="Cliente 8">
+                        <img src="./img/LOGOS-CLIENTES/SANCORSalud.svg" alt="Cliente 10">
+                        <img src="./img/LOGOS-CLIENTES/CALZETTA.png" alt="Cliente 12" style="max-width: 90px;">
+                        <img src="./img/LOGOS-CLIENTES/Ypf.png" alt="Cliente 13">
+                    </div>
+                 </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="formulario-section" id="formulario">
+        <div class="content-formulario">
+            <div class="info-contacto">
+                <h3 class="title4">Tu transformación tecnológica necesita un <span>partner de confianza</span></h3>
+                <p>Te invitamos a agendar una sesión sin cargo, donde analizaremos en profundidad las necesidades de tu organización con el fin de diseñar una propuesta orientada a generar impacto real</p>
+                <div class="redes">  
+                <a href="https://www.linkedin.com/company/mastersoft" target="_blank"><img src="./img/Linkedin-red.svg" alt="LinkedIn"></a>              
+                <a href="https://www.instagram.com/mastersoft.ok/" target="_blank"><img src="./img/Instagram-red.svg" alt="Instagram"></a>                
+                <a href="https://www.youtube.com/@mastersoftargentina" target="_blank"><img src="./img/Youtube-red.svg" alt="Facebook"></a>
+            </div>
+            </div>
+            <div class="formulario">
+                <form id="contact-form" action="https://formspree.io/f/myznyndd" method="POST" class="form">
+                        <label>                            
+                            <input type="text" name="nombre" placeholder="Nombre y apellido*" required>
+                        </label>
+                        <label>                           
+                            <input type="text" id="email" name="email" placeholder="Email*" required>
+                            <small id="email-error" class="error-msg"></small>
+                        </label>
+                        <label>                           
+                            <input type="text" name="empresa" placeholder="Empresa*" required>
+                        </label>
+                        <label>
+                        <p>Teléfono</p>
+                        <div class="phone-group">
+                            <div class="phone-code">
+                                <input 
+                                type="text" 
+                                id="code-toggle" 
+                                placeholder="+54"
+                                autocomplete="off"
+                                style="max-width: 50px;"
+                                />
+                                <ul id="code-list"></ul>
+                            </div>
+                            <input type="tel" id="telefono" name="telefono" placeholder="Ej: 11 2345 6789" required />
+                        </div>
+                        <small id="telefono-error" class="error-msg"></small>
+                        </label>
+
+                        <p>Productos de interés:*</p>
+                       <div class="custom-select multiple" data-name="producto-interes">
+                        <input type="text" name="producto-interes" tabindex="-1" class="select-required" required>
+                        <div class="select-trigger">
+                            <span class="selected-option">Selecciona una o más opciones</span>
+                            <span class="arrow"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m19 9-7 7-7-7"/></svg></span>
+                        </div>
+                        <ul class="select-options">
+                            <li data-value="Plataforma ERP">Plataforma ERP</li>
+                            <li data-value="Solución para Salud">Solución para Salud</li>
+                            <li data-value="Sistema para RRHH">Sistema para RRHH</li>
+                            <li data-value="Firma Digital">Firma Digital</li>
+                            <li data-value="otros">Otros productos/servicios</li>
+                        </ul>
+                        </div>
+
+                        <label>
+                            <p>Deja tu comentario*</p>
+                            <textarea  id="comentario" name="comentario" maxlength="1000" required></textarea>
+                            <small id="contador">0 / 1000</small>
+                        </label>
+
+                        <button type="submit">Solicita tu diagnóstico gratuito</button>
+                </form>
+
+                <!-- Mensaje oculto -->
+                <div id="thank-you-message" style="display: none; color: #132238; font-family: 'Open Sans', sans-serif; font-weight: bold; margin-top: 20px;">
+                ¡Gracias! Tu mensaje fue enviado correctamente.
+                </div>
+             </div>
+        </div>
+
+    </section>
+ <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="./img/logo-mastersoft2.png" alt="MasterSoft Logo">
+        </div>
+        <div class="footer-links">
+            <ul class="footer-list">
+                <li class="li-text"><strong>Oficina central</strong></li>
+                <li>Estados Unidos 2259 <br>C.A.B.A., Argentina</li>
+                <li><a href="mailto:info@mastersoft.com.ar" class="email-footer">info@mastersoft.com.ar</a>  <br>5365-5947 / 4941-2324</li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li class="li-text"><strong>Productos</strong></li>
+                <li><a href="productos-numbit">ERP</a></li>
+                <li><a href="productos-rrhh">RRHH</a></li>
+                <li><a href="productos-sysmed">HIS - Gestión Salud</a></li>
+                <li><a href="productos-firmaElectronica">Firma Electrónica</a></li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li><a href="oportunidades-redPartners">Quiero ser partner</a></li>
+                <li><a href="politica-calidad">Política de calidad</a></li>
+                <li><a href="nuestra-cultura">Quiero trabajar en Mastersoft</a></li>                
+            </ul>
+            <div class="redes">  
+                <a href="https://www.linkedin.com/company/mastersoft" target="_blank"><img src="./img/Linkedin.svg" alt="LinkedIn"></a>              
+                <a href="https://www.instagram.com/mastersoft.ok/" target="_blank"><img src="./img/Instagram.svg" alt="Instagram"></a>                
+                <a href="https://www.youtube.com/@mastersoftargentina" target="_blank"><img src="./img/Youtube.svg" alt="Facebook"></a>
+            </div>
+        </div>
+        </div>
+        <div class="copy">
+            <p>© 2025 MasterSoft. Todos los derechos reservados.</p>
+        </div>
+ </footer>
+ <div class="whatsapp">
+    <a href="https://wa.me/5491164496874" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat en WhatsApp">
+    <img src="./img/logo-whatsapp.png" alt="WhatsApp">
+    <span class="tooltip">¿Quieres chatear?</span>
+  </a>
+ </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./slick-slider/slick.min.js"></script>
+    <script src="./slick-slider/slick.js"></script>
+    <script src="script.js"></script>    
+</body>
+</html>
