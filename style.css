@@ -1252,7 +1252,7 @@ nav button{
   position: relative;
   width: 100%;
   min-height: 220px;
-  padding: 25px 15px;
+  padding: 25px 15px 0;
   background: #fff;
   border-radius: 6px !important;
   box-shadow: 0 3px 5px rgba(0, 0, 0, .18);
@@ -1276,7 +1276,7 @@ border-bottom: 4px solid var(--text-color);
 }
 .history-card ul{
     margin: 0;
-    padding: 10px 15px;
+    padding: 10px 0 10px 15px;
 }
 .history-card li{
     color: var(--text-color);
@@ -1284,7 +1284,7 @@ border-bottom: 4px solid var(--text-color);
     font-weight: 400;
     line-height: 16px;
     font-family: 'Open Sans', sans-serif;
-    margin: 0;
+    margin: 0 0 14px;
     text-align: left;
 }
 .history-year {
