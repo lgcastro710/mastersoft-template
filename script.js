@@ -403,34 +403,23 @@ document.addEventListener("DOMContentLoaded", function () {
   loadCountries();
 
   
-  function toggleAccordion(id) {
-            // Cerrar todos los acordeones
-            var accordions = document.querySelectorAll('.accordion');
-            accordions.forEach(function(accordion) {
-                var content = accordion.querySelector('.accordion-content');
-                var arrow = accordion.querySelector('.chevron-expander');
-                var border = accordion.querySelector('.border-header');
-                if (accordion.id !== id) {
-                    content.classList.remove('open');
-                    arrow.classList.remove('down');
-                    border.classList.remove('border-add');
-                }
-            });
-
-            // Alternar el acordeón actual
-            var currentAccordion = document.getElementById(id);
-            var currentContent = currentAccordion.querySelector('.accordion-content');
-            var currentArrow = currentAccordion.querySelector('.chevron-expander');
-            var currentBorder = currentAccordion.querySelector('.border-header');
-            if (currentContent.classList.contains('open')) {
-                currentContent.classList.remove('open');
-                currentArrow.classList.remove('down');
-                currentBorder.classList.remove('border-add');
-            } else {
-                currentContent.classList.add('open');
-                currentArrow.classList.add('down');
-                currentBorder.classList.add('border-add');
-            }
-        }
-
-      
+var items = document.querySelectorAll('.faq-item');
+ 
+  items.forEach(function(item){
+    var boton = item.querySelector('.faq-pregunta');
+    boton.addEventListener('click', function(){
+      var abierto = item.classList.contains('activo');
+ 
+      // Cierra todos los demás antes de abrir el actual
+      items.forEach(function(otro){
+        otro.classList.remove('activo');
+        otro.querySelector('.faq-pregunta').setAttribute('aria-expanded', 'false');
+      });
+ 
+      // Si estaba cerrado, lo abre. Si ya estaba abierto, queda cerrado (toggle).
+      if(!abierto){
+        item.classList.add('activo');
+        boton.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
