@@ -2705,6 +2705,7 @@ footer {
     padding: 18px 20px;
     font-size: 1rem;
     font-weight: 700;
+    line-height: 24px;
     color: var(--gris-pregunta);
     cursor: pointer;
   }
@@ -3350,6 +3351,9 @@ footer {
   align-items: center;
   gap: 10px;
   margin: 10px 0;
+}
+.faq-pregunta span br{
+    display: none;
 }
 .form {
     button {
