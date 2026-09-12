@@ -3222,7 +3222,11 @@ footer {
 .logo-infocard p br {
     display: none;
 }
-
+.cta-center{
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+}
 /* end section respaldo */
 /* section orgullo */
 .content-orgullo{
