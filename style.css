@@ -582,7 +582,7 @@ nav button{
     background-image: url("./img/MasterSoft_Erp_hero.png");
     background-size: cover;
     background-position: center;
-    height: 600px !important;
+    height: 620px !important;
 }
 .img-hero-sysmed{
     background-image: url("./img/MasterSoft_Sysmed_Hero.png");
@@ -648,7 +648,7 @@ nav button{
     background-image: url("./img/MasterSoft_rrhh_hero.png");
     background-size: cover;
     background-position: center;
-    height: 600px !important;
+    height: 620px !important;
 }
 .img-hero-firma{
     background-image: url("./img/MasterSoft_firma_hero.png");
@@ -1227,6 +1227,63 @@ nav button{
   }
 
 /* end section tecnologia */
+
+/* section Ai */
+ .miau{
+    position: relative;
+    overflow: hidden;
+    padding: 0px 24px 96px;
+    background: #fbf9f9;
+    isolation: isolate;
+  }
+ 
+  /* Degradados de esquina (naranja arriba a la derecha, rosado abajo a la izquierda) */
+  .miau::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    top: 0;
+    background:
+      radial-gradient(ellipse 700px 420px at 100% 26%, rgba(255, 170, 110, 0.45), rgba(255, 170, 110, 0) 70%),
+      radial-gradient(ellipse 600px 400px at 0% 100%, rgba(235, 150, 160, 0.25), rgba(235, 150, 160, 0) 70%);
+  }
+ 
+  /* Ondas decorativas: reemplazá la ruta por tu imagen de fondo */
+  .miau::after{
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 100%;
+    z-index: -1;
+    background: url("./img/fondo-ai.png") center bottom / cover no-repeat;
+    opacity: 0.8;
+    pointer-events: none;
+  }
+.content-sectionAi{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 0;
+}
+.content-imgText{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    justify-items: center;
+}
+.text-ai{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+.img-ai img{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+/* end section Ai */
 /* section acerca de nosotros */
 
 .history {
@@ -1495,6 +1552,14 @@ border-bottom: 4px solid var(--text-color);
     left:0px;
     margin-top: -100px;
     background: linear-gradient(to right top, var(--white-color) 49%, #f1f0f0 50%);
+  }
+    .skew-white-transparent{
+    width:100%;
+    height:100px;
+    position:absolute;
+    left:0px;
+    margin-top: -120px;
+    background: linear-gradient(to right top, transparent 49%, #ffffff 50%);
   }
   .skew-d{
     width:100%;
@@ -2656,6 +2721,61 @@ footer {
     color: var(--white-color);
 }
 /* styles accordion */
+.accordion {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+}
+
+.accordion-item {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.accordion-header {
+  background: #fff;
+  color: #333;
+  cursor: pointer;
+  padding: 1rem;
+  width: 100%;
+  text-align: left;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s ease;
+  position: relative;
+  border-radius: 8px;
+}
+
+.accordion-header:hover {
+  background: #f7f7f7;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.accordion-item.active .arrow {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  background: #fafafa;
+  padding: 0 1rem;
+}
+.accordion-content p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+}
 .section-faqs{
  background:
       radial-gradient(ellipse 900px 600px at 100% 100%, rgba(255, 150, 60, 0.45), rgba(255, 150, 60, 0) 60%),
@@ -3726,5 +3846,60 @@ footer {
     border-bottom: none;
     border-top: 4px solid var(--text-color);
     }
+    /* section Ai */
+ .miau{
+    position: relative;
+    overflow: hidden;
+    padding: 0px 24px 96px;
+    background: #fbf9f9;
+    isolation: isolate;
+  }
+ 
+  .miau::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    top: 0;
+    background:
+      radial-gradient(ellipse 700px 420px at 150% 18%, rgba(255, 170, 110, 0.45), rgba(255, 170, 110, 0) 70%),
+      radial-gradient(ellipse 600px 400px at 0% 100%, rgba(235, 150, 160, 0.25), rgba(235, 150, 160, 0) 70%);
+  }
+ 
+  /* Ondas decorativas: reemplazá la ruta por tu imagen de fondo */
+  .miau::after{
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 100%;
+    z-index: -1;
+    background: url("./img/fondo-ai.png") center bottom / cover no-repeat;
+    opacity: 0.8;
+    pointer-events: none;
+  }
+.content-sectionAi{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 0;
+}
+.content-imgText{
+    display: grid;
+    grid-template-columns: 1fr ;
+    gap: 40px;
+    align-items: center;
+    justify-items: center;
+}
+.text-ai{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+.img-ai img{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+/* end section Ai */
 }
 /* end section acerca de nosotros*/
