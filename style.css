@@ -1242,7 +1242,7 @@ nav button{
     content: "";
     position: absolute;
     inset: 0;
-    z-index: 1;
+    z-index: -1;
     top: 0;
     background:
       radial-gradient(ellipse 700px 420px at 100% 26%, rgba(255, 170, 110, 0.45), rgba(255, 170, 110, 0) 70%),
@@ -3846,6 +3846,14 @@ footer {
     border-bottom: none;
     border-top: 4px solid var(--text-color);
     }
+      .faq-respuesta p{
+    margin: 0;
+    padding: 20px 20px;
+    color: var(--gris-texto);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
     /* section Ai */
  .miau{
     position: relative;
