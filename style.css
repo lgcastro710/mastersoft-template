@@ -1320,7 +1320,7 @@ nav button{
     font-size: 24px;
     font-weight: 700;
     line-height: 30px;
-    font-family: 'nunito', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: var(--text-color);
     text-align: left;
     margin: 0;
@@ -1329,7 +1329,7 @@ nav button{
     font-size: 18px;
     font-weight: 500;
     line-height: 30px;
-    font-family: 'nunito', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: var(--gray-color);
     text-align: left;
     margin: 0;
